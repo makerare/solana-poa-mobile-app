@@ -1,0 +1,1210 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* Ev3ntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Ev3ntTests.m */; };
+		046C2D8A01B51360F07A6663 /* libPods-Ev3nt-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480895387CC4A687B754E47 /* libPods-Ev3nt-tvOS.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* Ev3ntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Ev3ntTests.m */; };
+		2FDEA1EC28E8EEDBCB49157D /* libPods-Ev3nt-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEB8C76B217CF76B9302228 /* libPods-Ev3nt-tvOSTests.a */; };
+		4AFE82491BB07059DD9A2FB0 /* libPods-Ev3nt-Ev3ntTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D68561B2E4174FF0FEB80F7 /* libPods-Ev3nt-Ev3ntTests.a */; };
+		6BACEAEEC544483071F4EB2F /* libPods-Ev3nt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C8728F47BA2ABAFA7E4D83 /* libPods-Ev3nt.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F80857CE28E60015002FF8DA /* Poppins Thin Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857A928E60014002FF8DA /* Poppins Thin Italic.ttf */; };
+		F80857CF28E60015002FF8DA /* Poppins Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AA28E60014002FF8DA /* Poppins Italic.ttf */; };
+		F80857D028E60015002FF8DA /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AB28E60014002FF8DA /* Roboto-Thin.ttf */; };
+		F80857D128E60015002FF8DA /* Poppins Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AC28E60014002FF8DA /* Poppins Regular.ttf */; };
+		F80857D228E60015002FF8DA /* Poppins Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AD28E60014002FF8DA /* Poppins Thin.ttf */; };
+		F80857D328E60015002FF8DA /* Poppins SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AE28E60014002FF8DA /* Poppins SemiBold.ttf */; };
+		F80857D428E60015002FF8DA /* Poppins Black Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AF28E60014002FF8DA /* Poppins Black Italic.ttf */; };
+		F80857D528E60015002FF8DA /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B028E60014002FF8DA /* Roboto-Bold.ttf */; };
+		F80857D628E60015002FF8DA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B128E60014002FF8DA /* Roboto-Medium.ttf */; };
+		F80857D728E60015002FF8DA /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B228E60014002FF8DA /* Roboto-Italic.ttf */; };
+		F80857D828E60015002FF8DA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B328E60014002FF8DA /* Roboto-Regular.ttf */; };
+		F80857D928E60015002FF8DA /* Poppins Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B428E60014002FF8DA /* Poppins Black.ttf */; };
+		F80857DA28E60015002FF8DA /* Poppins Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B528E60014002FF8DA /* Poppins Medium.ttf */; };
+		F80857DB28E60015002FF8DA /* Poppins ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B628E60014002FF8DA /* Poppins ExtraLight.ttf */; };
+		F80857DC28E60015002FF8DA /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B728E60014002FF8DA /* Roboto-ThinItalic.ttf */; };
+		F80857DD28E60015002FF8DA /* Poppins Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B828E60014002FF8DA /* Poppins Light.ttf */; };
+		F80857DE28E60015002FF8DA /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857B928E60014002FF8DA /* RobotoCondensed-Bold.ttf */; };
+		F80857DF28E60015002FF8DA /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857BA28E60014002FF8DA /* RobotoCondensed-BoldItalic.ttf */; };
+		F80857E028E60015002FF8DA /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857BB28E60014002FF8DA /* Roboto-LightItalic.ttf */; };
+		F80857E128E60015002FF8DA /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857BC28E60014002FF8DA /* Roboto-BlackItalic.ttf */; };
+		F80857E228E60015002FF8DA /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857BD28E60014002FF8DA /* Roboto-Light.ttf */; };
+		F80857E328E60015002FF8DA /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857BE28E60014002FF8DA /* RobotoCondensed-Italic.ttf */; };
+		F80857E428E60015002FF8DA /* Poppins Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857BF28E60014002FF8DA /* Poppins Bold.ttf */; };
+		F80857E528E60015002FF8DA /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C028E60014002FF8DA /* RobotoCondensed-Light.ttf */; };
+		F80857E628E60015002FF8DA /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C128E60015002FF8DA /* Roboto-BoldItalic.ttf */; };
+		F80857E728E60015002FF8DA /* Poppins Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C228E60015002FF8DA /* Poppins Medium Italic.ttf */; };
+		F80857E828E60015002FF8DA /* Poppins SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C328E60015002FF8DA /* Poppins SemiBold Italic.ttf */; };
+		F80857E928E60015002FF8DA /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F80857C428E60015002FF8DA /* README.txt */; };
+		F80857EA28E60015002FF8DA /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C528E60015002FF8DA /* Roboto-Black.ttf */; };
+		F80857EB28E60015002FF8DA /* Poppins Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C628E60015002FF8DA /* Poppins Bold Italic.ttf */; };
+		F80857EC28E60015002FF8DA /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C728E60015002FF8DA /* Roboto-MediumItalic.ttf */; };
+		F80857ED28E60015002FF8DA /* Poppins ExtraBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C828E60015002FF8DA /* Poppins ExtraBold Italic.ttf */; };
+		F80857EE28E60015002FF8DA /* Poppins Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857C928E60015002FF8DA /* Poppins Light Italic.ttf */; };
+		F80857EF28E60015002FF8DA /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857CA28E60015002FF8DA /* RobotoCondensed-Regular.ttf */; };
+		F80857F028E60015002FF8DA /* Poppins ExtraLight Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857CB28E60015002FF8DA /* Poppins ExtraLight Italic.ttf */; };
+		F80857F128E60015002FF8DA /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857CC28E60015002FF8DA /* RobotoCondensed-LightItalic.ttf */; };
+		F80857F228E60015002FF8DA /* Poppins ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857CD28E60015002FF8DA /* Poppins ExtraBold.ttf */; };
+		F884017029074867002AA5A8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F884016F29074867002AA5A8 /* GameKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = Ev3nt;
+		};
+		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
+			remoteInfo = "Ev3nt-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* Ev3ntTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ev3ntTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* Ev3ntTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ev3ntTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Ev3nt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ev3nt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Ev3nt/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Ev3nt/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Ev3nt/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Ev3nt/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Ev3nt/main.m; sourceTree = "<group>"; };
+		1480895387CC4A687B754E47 /* libPods-Ev3nt-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6579958051F9EFCF5FD5F8 /* Pods-Ev3nt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt/Pods-Ev3nt.debug.xcconfig"; sourceTree = "<group>"; };
+		245A007AB42BF9929379149B /* Pods-Ev3nt-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2A10C0BE46D278E02C597175 /* Pods-Ev3nt-Ev3ntTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-Ev3ntTests.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Ev3nt-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ev3nt-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Ev3nt-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ev3nt-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E71309622D68E001D114E0 /* Pods-Ev3nt-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOSTests/Pods-Ev3nt-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A87705BBA34E5C6A6F0E65F /* Pods-Ev3nt-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOSTests/Pods-Ev3nt-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D68561B2E4174FF0FEB80F7 /* libPods-Ev3nt-Ev3ntTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt-Ev3ntTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C8728F47BA2ABAFA7E4D83 /* libPods-Ev3nt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E4A3F3336822C3E117D036 /* Pods-Ev3nt-Ev3ntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-Ev3ntTests.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Ev3nt/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D729C4275EA53A6563EE7A11 /* Pods-Ev3nt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt/Pods-Ev3nt.release.xcconfig"; sourceTree = "<group>"; };
+		DDEB8C76B217CF76B9302228 /* libPods-Ev3nt-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F80857A928E60014002FF8DA /* Poppins Thin Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Thin Italic.ttf"; path = "../assets/font/Poppins Thin Italic.ttf"; sourceTree = "<group>"; };
+		F80857AA28E60014002FF8DA /* Poppins Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Italic.ttf"; path = "../assets/font/Poppins Italic.ttf"; sourceTree = "<group>"; };
+		F80857AB28E60014002FF8DA /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../assets/font/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		F80857AC28E60014002FF8DA /* Poppins Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Regular.ttf"; path = "../assets/font/Poppins Regular.ttf"; sourceTree = "<group>"; };
+		F80857AD28E60014002FF8DA /* Poppins Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Thin.ttf"; path = "../assets/font/Poppins Thin.ttf"; sourceTree = "<group>"; };
+		F80857AE28E60014002FF8DA /* Poppins SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins SemiBold.ttf"; path = "../assets/font/Poppins SemiBold.ttf"; sourceTree = "<group>"; };
+		F80857AF28E60014002FF8DA /* Poppins Black Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Black Italic.ttf"; path = "../assets/font/Poppins Black Italic.ttf"; sourceTree = "<group>"; };
+		F80857B028E60014002FF8DA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../assets/font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		F80857B128E60014002FF8DA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../assets/font/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F80857B228E60014002FF8DA /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "../assets/font/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		F80857B328E60014002FF8DA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../assets/font/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F80857B428E60014002FF8DA /* Poppins Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Black.ttf"; path = "../assets/font/Poppins Black.ttf"; sourceTree = "<group>"; };
+		F80857B528E60014002FF8DA /* Poppins Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Medium.ttf"; path = "../assets/font/Poppins Medium.ttf"; sourceTree = "<group>"; };
+		F80857B628E60014002FF8DA /* Poppins ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins ExtraLight.ttf"; path = "../assets/font/Poppins ExtraLight.ttf"; sourceTree = "<group>"; };
+		F80857B728E60014002FF8DA /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "../assets/font/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F80857B828E60014002FF8DA /* Poppins Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Light.ttf"; path = "../assets/font/Poppins Light.ttf"; sourceTree = "<group>"; };
+		F80857B928E60014002FF8DA /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "../assets/font/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		F80857BA28E60014002FF8DA /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-BoldItalic.ttf"; path = "../assets/font/RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F80857BB28E60014002FF8DA /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "../assets/font/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		F80857BC28E60014002FF8DA /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "../assets/font/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F80857BD28E60014002FF8DA /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../assets/font/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		F80857BE28E60014002FF8DA /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Italic.ttf"; path = "../assets/font/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		F80857BF28E60014002FF8DA /* Poppins Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Bold.ttf"; path = "../assets/font/Poppins Bold.ttf"; sourceTree = "<group>"; };
+		F80857C028E60014002FF8DA /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Light.ttf"; path = "../assets/font/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		F80857C128E60015002FF8DA /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BoldItalic.ttf"; path = "../assets/font/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F80857C228E60015002FF8DA /* Poppins Medium Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Medium Italic.ttf"; path = "../assets/font/Poppins Medium Italic.ttf"; sourceTree = "<group>"; };
+		F80857C328E60015002FF8DA /* Poppins SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins SemiBold Italic.ttf"; path = "../assets/font/Poppins SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		F80857C428E60015002FF8DA /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../assets/font/README.txt; sourceTree = "<group>"; };
+		F80857C528E60015002FF8DA /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../assets/font/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		F80857C628E60015002FF8DA /* Poppins Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Bold Italic.ttf"; path = "../assets/font/Poppins Bold Italic.ttf"; sourceTree = "<group>"; };
+		F80857C728E60015002FF8DA /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "../assets/font/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F80857C828E60015002FF8DA /* Poppins ExtraBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins ExtraBold Italic.ttf"; path = "../assets/font/Poppins ExtraBold Italic.ttf"; sourceTree = "<group>"; };
+		F80857C928E60015002FF8DA /* Poppins Light Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Light Italic.ttf"; path = "../assets/font/Poppins Light Italic.ttf"; sourceTree = "<group>"; };
+		F80857CA28E60015002FF8DA /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../assets/font/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		F80857CB28E60015002FF8DA /* Poppins ExtraLight Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins ExtraLight Italic.ttf"; path = "../assets/font/Poppins ExtraLight Italic.ttf"; sourceTree = "<group>"; };
+		F80857CC28E60015002FF8DA /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-LightItalic.ttf"; path = "../assets/font/RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		F80857CD28E60015002FF8DA /* Poppins ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins ExtraBold.ttf"; path = "../assets/font/Poppins ExtraBold.ttf"; sourceTree = "<group>"; };
+		F884016F29074867002AA5A8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		F884017129074883002AA5A8 /* Ev3nt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Ev3nt.entitlements; path = Ev3nt/Ev3nt.entitlements; sourceTree = "<group>"; };
+		FFFC24901C32261871D2F421 /* Pods-Ev3nt-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AFE82491BB07059DD9A2FB0 /* libPods-Ev3nt-Ev3ntTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BACEAEEC544483071F4EB2F /* libPods-Ev3nt.a in Frameworks */,
+				F884017029074867002AA5A8 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046C2D8A01B51360F07A6663 /* libPods-Ev3nt-tvOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FDEA1EC28E8EEDBCB49157D /* libPods-Ev3nt-tvOSTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* Ev3ntTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* Ev3ntTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = Ev3ntTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* Ev3nt */ = {
+			isa = PBXGroup;
+			children = (
+				F884017129074883002AA5A8 /* Ev3nt.entitlements */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = Ev3nt;
+			sourceTree = "<group>";
+		};
+		162AA7D0BACC4AC1A36071F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F80857AF28E60014002FF8DA /* Poppins Black Italic.ttf */,
+				F80857B428E60014002FF8DA /* Poppins Black.ttf */,
+				F80857C628E60015002FF8DA /* Poppins Bold Italic.ttf */,
+				F80857BF28E60014002FF8DA /* Poppins Bold.ttf */,
+				F80857C828E60015002FF8DA /* Poppins ExtraBold Italic.ttf */,
+				F80857CD28E60015002FF8DA /* Poppins ExtraBold.ttf */,
+				F80857CB28E60015002FF8DA /* Poppins ExtraLight Italic.ttf */,
+				F80857B628E60014002FF8DA /* Poppins ExtraLight.ttf */,
+				F80857AA28E60014002FF8DA /* Poppins Italic.ttf */,
+				F80857C928E60015002FF8DA /* Poppins Light Italic.ttf */,
+				F80857B828E60014002FF8DA /* Poppins Light.ttf */,
+				F80857C228E60015002FF8DA /* Poppins Medium Italic.ttf */,
+				F80857B528E60014002FF8DA /* Poppins Medium.ttf */,
+				F80857AC28E60014002FF8DA /* Poppins Regular.ttf */,
+				F80857C328E60015002FF8DA /* Poppins SemiBold Italic.ttf */,
+				F80857AE28E60014002FF8DA /* Poppins SemiBold.ttf */,
+				F80857A928E60014002FF8DA /* Poppins Thin Italic.ttf */,
+				F80857AD28E60014002FF8DA /* Poppins Thin.ttf */,
+				F80857C428E60015002FF8DA /* README.txt */,
+				F80857C528E60015002FF8DA /* Roboto-Black.ttf */,
+				F80857BC28E60014002FF8DA /* Roboto-BlackItalic.ttf */,
+				F80857B028E60014002FF8DA /* Roboto-Bold.ttf */,
+				F80857C128E60015002FF8DA /* Roboto-BoldItalic.ttf */,
+				F80857B228E60014002FF8DA /* Roboto-Italic.ttf */,
+				F80857BD28E60014002FF8DA /* Roboto-Light.ttf */,
+				F80857BB28E60014002FF8DA /* Roboto-LightItalic.ttf */,
+				F80857B128E60014002FF8DA /* Roboto-Medium.ttf */,
+				F80857C728E60015002FF8DA /* Roboto-MediumItalic.ttf */,
+				F80857B328E60014002FF8DA /* Roboto-Regular.ttf */,
+				F80857AB28E60014002FF8DA /* Roboto-Thin.ttf */,
+				F80857B728E60014002FF8DA /* Roboto-ThinItalic.ttf */,
+				F80857B928E60014002FF8DA /* RobotoCondensed-Bold.ttf */,
+				F80857BA28E60014002FF8DA /* RobotoCondensed-BoldItalic.ttf */,
+				F80857BE28E60014002FF8DA /* RobotoCondensed-Italic.ttf */,
+				F80857C028E60014002FF8DA /* RobotoCondensed-Light.ttf */,
+				F80857CC28E60015002FF8DA /* RobotoCondensed-LightItalic.ttf */,
+				F80857CA28E60015002FF8DA /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F884016F29074867002AA5A8 /* GameKit.framework */,
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				54C8728F47BA2ABAFA7E4D83 /* libPods-Ev3nt.a */,
+				4D68561B2E4174FF0FEB80F7 /* libPods-Ev3nt-Ev3ntTests.a */,
+				1480895387CC4A687B754E47 /* libPods-Ev3nt-tvOS.a */,
+				DDEB8C76B217CF76B9302228 /* libPods-Ev3nt-tvOSTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7845E6F53AB577CD321DA972 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D6579958051F9EFCF5FD5F8 /* Pods-Ev3nt.debug.xcconfig */,
+				D729C4275EA53A6563EE7A11 /* Pods-Ev3nt.release.xcconfig */,
+				2A10C0BE46D278E02C597175 /* Pods-Ev3nt-Ev3ntTests.debug.xcconfig */,
+				61E4A3F3336822C3E117D036 /* Pods-Ev3nt-Ev3ntTests.release.xcconfig */,
+				245A007AB42BF9929379149B /* Pods-Ev3nt-tvOS.debug.xcconfig */,
+				FFFC24901C32261871D2F421 /* Pods-Ev3nt-tvOS.release.xcconfig */,
+				4A87705BBA34E5C6A6F0E65F /* Pods-Ev3nt-tvOSTests.debug.xcconfig */,
+				34E71309622D68E001D114E0 /* Pods-Ev3nt-tvOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* Ev3nt */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* Ev3ntTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				7845E6F53AB577CD321DA972 /* Pods */,
+				162AA7D0BACC4AC1A36071F5 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Ev3nt.app */,
+				00E356EE1AD99517003FC87E /* Ev3ntTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Ev3nt-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Ev3nt-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* Ev3ntTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Ev3ntTests" */;
+			buildPhases = (
+				1E74BB4B5EC2F05BDC9FADC5 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				59177EB5DD07A0B03D1FE447 /* [CP] Copy Pods Resources */,
+				6AD9F577C2BC67CB855DE5C6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = Ev3ntTests;
+			productName = Ev3ntTests;
+			productReference = 00E356EE1AD99517003FC87E /* Ev3ntTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* Ev3nt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Ev3nt" */;
+			buildPhases = (
+				2938F77DF72D451666BE1999 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				9DC657B365810A4137777FD6 /* [CP] Copy Pods Resources */,
+				9D662C78C0949E7E2E7289F6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ev3nt;
+			productName = Ev3nt;
+			productReference = 13B07F961A680F5B00A75B9A /* Ev3nt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E47A1E0B4A5D006451C7 /* Ev3nt-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOS" */;
+			buildPhases = (
+				6E91786E37259E1E57014B2C /* [CP] Check Pods Manifest.lock */,
+				FD10A7F122414F3F0027D42C /* Start Packager */,
+				2D02E4771E0B4A5D006451C7 /* Sources */,
+				2D02E4781E0B4A5D006451C7 /* Frameworks */,
+				2D02E4791E0B4A5D006451C7 /* Resources */,
+				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				F591DDDEBAB5B6E3F33F612A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ev3nt-tvOS";
+			productName = "Ev3nt-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Ev3nt-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E48F1E0B4A5D006451C7 /* Ev3nt-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOSTests" */;
+			buildPhases = (
+				219130FDAA9CE49A687657B2 /* [CP] Check Pods Manifest.lock */,
+				2D02E48C1E0B4A5D006451C7 /* Sources */,
+				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
+				2D02E48E1E0B4A5D006451C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
+			);
+			name = "Ev3nt-tvOSTests";
+			productName = "Ev3nt-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Ev3nt-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 6W6NX673A2;
+						LastSwiftMigration = 1120;
+						ProvisioningStyle = Automatic;
+					};
+					2D02E47A1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					2D02E48F1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Ev3nt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Ev3nt */,
+				00E356ED1AD99517003FC87E /* Ev3ntTests */,
+				2D02E47A1E0B4A5D006451C7 /* Ev3nt-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Ev3nt-tvOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80857F128E60015002FF8DA /* RobotoCondensed-LightItalic.ttf in Resources */,
+				F80857DE28E60015002FF8DA /* RobotoCondensed-Bold.ttf in Resources */,
+				F80857D328E60015002FF8DA /* Poppins SemiBold.ttf in Resources */,
+				F80857E028E60015002FF8DA /* Roboto-LightItalic.ttf in Resources */,
+				F80857E228E60015002FF8DA /* Roboto-Light.ttf in Resources */,
+				F80857E928E60015002FF8DA /* README.txt in Resources */,
+				F80857EA28E60015002FF8DA /* Roboto-Black.ttf in Resources */,
+				F80857EF28E60015002FF8DA /* RobotoCondensed-Regular.ttf in Resources */,
+				F80857F028E60015002FF8DA /* Poppins ExtraLight Italic.ttf in Resources */,
+				F80857D728E60015002FF8DA /* Roboto-Italic.ttf in Resources */,
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				F80857D528E60015002FF8DA /* Roboto-Bold.ttf in Resources */,
+				F80857D228E60015002FF8DA /* Poppins Thin.ttf in Resources */,
+				F80857E428E60015002FF8DA /* Poppins Bold.ttf in Resources */,
+				F80857EE28E60015002FF8DA /* Poppins Light Italic.ttf in Resources */,
+				F80857E628E60015002FF8DA /* Roboto-BoldItalic.ttf in Resources */,
+				F80857D428E60015002FF8DA /* Poppins Black Italic.ttf in Resources */,
+				F80857CF28E60015002FF8DA /* Poppins Italic.ttf in Resources */,
+				F80857DB28E60015002FF8DA /* Poppins ExtraLight.ttf in Resources */,
+				F80857DD28E60015002FF8DA /* Poppins Light.ttf in Resources */,
+				F80857DF28E60015002FF8DA /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				F80857D928E60015002FF8DA /* Poppins Black.ttf in Resources */,
+				F80857D128E60015002FF8DA /* Poppins Regular.ttf in Resources */,
+				F80857EB28E60015002FF8DA /* Poppins Bold Italic.ttf in Resources */,
+				F80857ED28E60015002FF8DA /* Poppins ExtraBold Italic.ttf in Resources */,
+				F80857DC28E60015002FF8DA /* Roboto-ThinItalic.ttf in Resources */,
+				F80857CE28E60015002FF8DA /* Poppins Thin Italic.ttf in Resources */,
+				F80857E328E60015002FF8DA /* RobotoCondensed-Italic.ttf in Resources */,
+				F80857D628E60015002FF8DA /* Roboto-Medium.ttf in Resources */,
+				F80857E728E60015002FF8DA /* Poppins Medium Italic.ttf in Resources */,
+				F80857E528E60015002FF8DA /* RobotoCondensed-Light.ttf in Resources */,
+				F80857E128E60015002FF8DA /* Roboto-BlackItalic.ttf in Resources */,
+				F80857D828E60015002FF8DA /* Roboto-Regular.ttf in Resources */,
+				F80857F228E60015002FF8DA /* Poppins ExtraBold.ttf in Resources */,
+				F80857E828E60015002FF8DA /* Poppins SemiBold Italic.ttf in Resources */,
+				F80857DA28E60015002FF8DA /* Poppins Medium.ttf in Resources */,
+				F80857D028E60015002FF8DA /* Roboto-Thin.ttf in Resources */,
+				F80857EC28E60015002FF8DA /* Roboto-MediumItalic.ttf in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4791E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		1E74BB4B5EC2F05BDC9FADC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-Ev3ntTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		219130FDAA9CE49A687657B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2938F77DF72D451666BE1999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		59177EB5DD07A0B03D1FE447 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core-60309c9c/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AD9F577C2BC67CB855DE5C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E91786E37259E1E57014B2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D662C78C0949E7E2E7289F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC657B365810A4137777FD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core-60309c9c/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F591DDDEBAB5B6E3F33F612A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F122414F3F0027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* Ev3ntTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4771E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
+				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCD954D1E0B4F2C00145EB5 /* Ev3ntTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* Ev3nt */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D02E47A1E0B4A5D006451C7 /* Ev3nt-tvOS */;
+			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A10C0BE46D278E02C597175 /* Pods-Ev3nt-Ev3ntTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Ev3ntTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt.app/Ev3nt";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E4A3F3336822C3E117D036 /* Pods-Ev3nt-Ev3ntTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = Ev3ntTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt.app/Ev3nt";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D6579958051F9EFCF5FD5F8 /* Pods-Ev3nt.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Ev3nt/Ev3nt.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W6NX673A2;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Ev3nt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.makerare.Ev3nt;
+				PRODUCT_NAME = Ev3nt;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D729C4275EA53A6563EE7A11 /* Pods-Ev3nt.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Ev3nt/Ev3nt.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Pierre-André LONG (6W6NX673A2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Pierre-André LONG (6W6NX673A2)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W6NX673A2;
+				INFOPLIST_FILE = Ev3nt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.makerare.Ev3nt;
+				PRODUCT_NAME = Ev3nt;
+				PROVISIONING_PROFILE_SPECIFIER = appStoreEv3nt;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2D02E4971E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 245A007AB42BF9929379149B /* Pods-Ev3nt-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Ev3nt-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		2D02E4981E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFFC24901C32261871D2F421 /* Pods-Ev3nt-tvOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Ev3nt-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+		2D02E4991E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A87705BBA34E5C6A6F0E65F /* Pods-Ev3nt-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Ev3nt-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt-tvOS.app/Ev3nt-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		2D02E49A1E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E71309622D68E001D114E0 /* Pods-Ev3nt-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Ev3nt-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt-tvOS.app/Ev3nt-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Ev3ntTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Ev3nt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4971E0B4A5E006451C7 /* Debug */,
+				2D02E4981E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4991E0B4A5E006451C7 /* Debug */,
+				2D02E49A1E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Ev3nt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
