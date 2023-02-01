@@ -27,6 +27,8 @@ if (typeof BigInt === 'undefined') global.BigInt = require('big-integer')
 
 
 const createConnection = async () => {
+  //global.rpc = 'https://api.mainnet-beta.solana.com';
+
   if (!(global.rpc))
     global.rpc = (await axios.get(ENV.get_rpc_url)).data.rpc_url;
   return new solanaWeb3.Connection(global.rpc);
@@ -56,7 +58,6 @@ const isValidAddress = async (publicKey) => {
 
 
 const getBalance = async (publicKey) => {
-  console.log('getBalance');
   const connection = await createConnection();
 
   const _publicKey = publicKeyFromString(publicKey);
@@ -159,59 +160,6 @@ const getFeesAndBalance = async (from, toAddress, selectedNFT, amount) => {
 
       }
 
-  //console.log(toAssociatedTokenAddress)
-  //return {empty: true}
-/*
-  const createTokenInstruct = createAssociatedTokenAccountInstruction(
-    fromPubkey,
-    associatedToken,
-    destPublicKey,
-    mintPublicKey,
-    TOKEN_PROGRAM_ID,
-    ASSOCIATED_TOKEN_PROGRAM_ID,
-  ); */
-
-  /* IMPORTANT TRICK-------------------------------------------------------------
-  const createTokenInstructRep = await getOrCreateAssociatedTokenAccount(
-    connection,
-    from,
-    mintPublicKey,
-    destPublicKey);
-  console.log(createTokenInstructRep);
-
-  let toTokenAccountAddress = undefined;
-  for (const accountData of createTokenInstructRep.added.keys) {
-    if (!accountData.isSigner && accountData.isWritable)
-    console.log(accountData.pubkey)
-      toTokenAccountAddress = accountData.publicKey;
-      break;
-  }
-  if (createTokenInstructRep.msg != undefined)
-    transaction = transaction.add(createTokenInstructRep.added);
-  else
-    toTokenAccountAddress = createTokenInstructRep.address;
-
-  console.log(toTokenAccount);
-  END TRICK -------------------------------------------------------------------- */
-
-  //return {empty: true}
-/*
-    const toTokenAccount = await getOrCreateAssociatedTokenAccount(
-      connection,
-      from,
-      mintPublicKey,
-      destPublicKey);
-*/
-
-/*
-    const mintToken = new Token(
-      connection,
-      mintPublicKey,
-      TOKEN_PROGRAM_ID,
-      from.payer
-    ); */
-
-
     transaction = transaction.add(
       createTransferInstruction(
                               fromTokenAccount.address, // source
@@ -224,42 +172,6 @@ const getFeesAndBalance = async (from, toAddress, selectedNFT, amount) => {
     )
 
 
-/*
-    const receiverAccount = await connection.getAccountInfo(
-      associatedDestinationTokenAddr
-    );
-
-    const instructions = [];
-
-    if (receiverAccount === null) {
-      console.log("receiver account is null!");
-      instructions.push(
-        Token.createAssociatedTokenAccountInstruction(
-          mintToken.associatedProgramId,
-          mintToken.programId,
-          mintPublicKey,
-          associatedDestinationTokenAddr,
-          destPublicKey,
-          fromPubkey
-        )
-      );
-    }
-
-    instructions.push(
-      Token.createTransferInstruction(
-        TOKEN_PROGRAM_ID,
-        associatedSourceTokenAddr,
-        associatedDestinationTokenAddr,
-        fromPubkey,
-        [],
-        1
-      )
-    );
-
-    for (let i = 0; i < instructions.length; i++) {
-      transaction = transaction.add(instructions[i]);
-    } */
-
   }
   if (!somethingInTransaction) {
     return { transactionEmpty : true }
@@ -271,8 +183,7 @@ const getFeesAndBalance = async (from, toAddress, selectedNFT, amount) => {
 
   transaction.recentBlockhash = blockhash;
 
-  //console.log(transaction.instructions[0].data)
-     //console.log(metadata.decodeMetadata(transaction.instructions[0].data));
+  console.log(blockhash)
 
   const response = await connection.getFeeForMessage(
     transaction.compileMessage(),
@@ -294,13 +205,21 @@ const getFeesAndBalance = async (from, toAddress, selectedNFT, amount) => {
     for (const log of simulation.value.logs) {
       if (log.includes('Transfer: insufficient lamports')) {
         const splittedMessage = log.split(' ');
+
+        console.log(log)
         const landportsMin = splittedMessage[splittedMessage.length -1];
+
+        console.log({landportsMin})
+
+        console.log({landportsMincalc: (Number(landportsMin) / LAMPORTS_PER_SOL)})
         feeInSol = Number(landportsMin) / LAMPORTS_PER_SOL - Number(amount);
+
+        console.log({ feeInSol })
       }
     }
   }
 
-  //console.log(response)
+  console.log(simulation)
 
   /*
   const signature = await solanaWeb3.sendAndConfirmTransaction(
@@ -455,7 +374,7 @@ const getTransactionsFromToAccountsLinkedToAddress = async (connection, publicKe
 };
 
 const getHistory = async (publicKeyString, options = { limit: 20 }) => {
-  console.log('getHistory '+publicKeyString);
+  console.log('getHistory ' + publicKeyString);
 
   const publicKey = publicKeyFromString(publicKeyString);
   const connection = await createConnection();
@@ -488,6 +407,8 @@ const getHistory = async (publicKeyString, options = { limit: 20 }) => {
   let uris = {};
 
   for (const parsedTx of parsedHistory) {
+    if(!parsedTx)
+      continue
     idInc += 1;
     const deltaSolAccounts = {};
     let amountSigners = 0;

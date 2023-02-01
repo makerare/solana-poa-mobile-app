@@ -234,6 +234,7 @@ const TransferedNFTs =  ( props ) => {
                         borderWidth: 3,
                         borderColor: (asset.incoming ? COLORS.incoming : COLORS.outgoing),
                         borderRadius: 15,
+                        padding: 5
                     }}>
                     <View
                         style={{
@@ -246,6 +247,7 @@ const TransferedNFTs =  ( props ) => {
                     >
                       <Text style={{ //...FONTS.h4,
                         textAlign: 'center', fontSize: 21, lineHeight: 25, textDecorationLine: 'underline', color:'#505050'}}>{asset.data.name}</Text>
+
                       <View style={{width:"100%", flexDirection: "row",}}>
                         <Text style={{ fontWeight: "bold", fontSize: 18, color:'#505050',width: "100%",textAlign: 'center'}}>
                           Collection
@@ -336,21 +338,21 @@ const Balance =  ( props ) => {
     return (
       <View
           style={{
-            top: 45,
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: "row"
+            flexDirection: "row",
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            textAlignVertical: 'bottom'
           }}
       >
       <Text style={{ ...FONTS.body1,
                     fontSize: 36,
                     color: COLORS.white,
-                    fontWeight: "bold"
-                  }}>... </Text>
+                    top: 7,
+                  }}>- </Text>
       <Text style={{ //...FONTS.h1,
                     fontSize: 20,
                     color: COLORS.white,
-                    fontWeight: "bold"
                   }}>SOL</Text>
       </View>
     );
@@ -503,7 +505,6 @@ const Wallet = ( props ) => {
   const [isTransactionsRefreshing, setIsTransactionsRefreshing] = useState(false);
 
   async function refreshTransactions() {
-    console.log("refreshTransactions")
      setIsTransactionsRefreshing(true)
      try {
        const currentAccount = accounts[0];

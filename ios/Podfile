@@ -21,7 +21,7 @@ post_install do |installer|
   end
 end
 
-target 'Ev3nt' do
+target 'Bary' do
   config = use_native_modules!
 
   use_react_native!(
@@ -33,7 +33,7 @@ target 'Ev3nt' do
 
   pod 'react-native-video', :path => '../node_modules/react-native-video'
 
-  target 'Ev3ntTests' do
+  target 'BaryTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -48,10 +48,10 @@ target 'Ev3nt' do
   #end
 end
 
-target 'Ev3nt-tvOS' do
-  # Pods for Ev3nt-tvOS
+target 'Bary-tvOS' do
+  # Pods for Bary-tvOS
 
-  target 'Ev3nt-tvOSTests' do
+  target 'Bary-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

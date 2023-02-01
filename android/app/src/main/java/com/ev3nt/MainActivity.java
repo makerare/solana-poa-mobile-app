@@ -1,4 +1,4 @@
-package com.ev3nt;
+package com.bary;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "Ev3nt";
+    return "Bary";
   }
 }

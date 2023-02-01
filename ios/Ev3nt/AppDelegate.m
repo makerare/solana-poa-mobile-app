@@ -41,7 +41,7 @@ static void InitializeFlipper(UIApplication *application) {
   #endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"Ev3nt"
+                                                   moduleName:@"Bary"
                                             initialProperties:nil];
 
 

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "Ev3nt-tvOS.app"
-               BlueprintName = "Ev3nt-tvOS"
-               ReferencedContainer = "container:Ev3nt.xcodeproj">
+               BuildableName = "Bary-tvOS.app"
+               BlueprintName = "Bary-tvOS"
+               ReferencedContainer = "container:Bary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Ev3nt-tvOSTests.xctest"
-               BlueprintName = "Ev3nt-tvOSTests"
-               ReferencedContainer = "container:Ev3nt.xcodeproj">
+               BuildableName = "Bary-tvOSTests.xctest"
+               BlueprintName = "Bary-tvOSTests"
+               ReferencedContainer = "container:Bary.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Ev3nt-tvOS.app"
-            BlueprintName = "Ev3nt-tvOS"
-            ReferencedContainer = "container:Ev3nt.xcodeproj">
+            BuildableName = "Bary-tvOS.app"
+            BlueprintName = "Bary-tvOS"
+            ReferencedContainer = "container:Bary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Ev3nt-tvOS.app"
-            BlueprintName = "Ev3nt-tvOS"
-            ReferencedContainer = "container:Ev3nt.xcodeproj">
+            BuildableName = "Bary-tvOS.app"
+            BlueprintName = "Bary-tvOS"
+            ReferencedContainer = "container:Bary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

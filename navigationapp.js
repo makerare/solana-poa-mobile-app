@@ -41,7 +41,7 @@ const Stack = createStackNavigator();
 const NavigationApp = () => {
   SystemNavigationBar.navigationHide();
   const hasWallet = useStoreState((state) => state.hasWallet);
-  if (false && !global.firstGet)
+  if ( !global.firstGet)
       return (
         <NavigationContainer theme={theme}>
             <Stack.Navigator

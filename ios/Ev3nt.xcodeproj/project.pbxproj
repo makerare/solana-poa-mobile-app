@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* Ev3ntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Ev3ntTests.m */; };
-		046C2D8A01B51360F07A6663 /* libPods-Ev3nt-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480895387CC4A687B754E47 /* libPods-Ev3nt-tvOS.a */; };
+		00E356F31AD99517003FC87E /* BaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BaryTests.m */; };
+		046C2D8A01B51360F07A6663 /* libPods-Bary-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1480895387CC4A687B754E47 /* libPods-Bary-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* Ev3ntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Ev3ntTests.m */; };
-		2FDEA1EC28E8EEDBCB49157D /* libPods-Ev3nt-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEB8C76B217CF76B9302228 /* libPods-Ev3nt-tvOSTests.a */; };
-		4AFE82491BB07059DD9A2FB0 /* libPods-Ev3nt-Ev3ntTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D68561B2E4174FF0FEB80F7 /* libPods-Ev3nt-Ev3ntTests.a */; };
-		6BACEAEEC544483071F4EB2F /* libPods-Ev3nt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C8728F47BA2ABAFA7E4D83 /* libPods-Ev3nt.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* BaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BaryTests.m */; };
+		2FDEA1EC28E8EEDBCB49157D /* libPods-Bary-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEB8C76B217CF76B9302228 /* libPods-Bary-tvOSTests.a */; };
+		4AFE82491BB07059DD9A2FB0 /* libPods-Bary-BaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D68561B2E4174FF0FEB80F7 /* libPods-Bary-BaryTests.a */; };
+		6BACEAEEC544483071F4EB2F /* libPods-Bary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C8728F47BA2ABAFA7E4D83 /* libPods-Bary.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		F80857CE28E60015002FF8DA /* Poppins Thin Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857A928E60014002FF8DA /* Poppins Thin Italic.ttf */; };
 		F80857CF28E60015002FF8DA /* Poppins Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F80857AA28E60014002FF8DA /* Poppins Italic.ttf */; };
@@ -66,42 +66,42 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Ev3nt;
+			remoteInfo = Bary;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "Ev3nt-tvOS";
+			remoteInfo = "Bary-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* Ev3ntTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ev3ntTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* BaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* Ev3ntTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ev3ntTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Ev3nt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ev3nt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Ev3nt/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Ev3nt/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Ev3nt/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Ev3nt/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Ev3nt/main.m; sourceTree = "<group>"; };
-		1480895387CC4A687B754E47 /* libPods-Ev3nt-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D6579958051F9EFCF5FD5F8 /* Pods-Ev3nt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt/Pods-Ev3nt.debug.xcconfig"; sourceTree = "<group>"; };
-		245A007AB42BF9929379149B /* Pods-Ev3nt-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		2A10C0BE46D278E02C597175 /* Pods-Ev3nt-Ev3ntTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-Ev3ntTests.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* Ev3nt-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ev3nt-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* Ev3nt-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ev3nt-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34E71309622D68E001D114E0 /* Pods-Ev3nt-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOSTests/Pods-Ev3nt-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		4A87705BBA34E5C6A6F0E65F /* Pods-Ev3nt-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOSTests/Pods-Ev3nt-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D68561B2E4174FF0FEB80F7 /* libPods-Ev3nt-Ev3ntTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt-Ev3ntTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54C8728F47BA2ABAFA7E4D83 /* libPods-Ev3nt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61E4A3F3336822C3E117D036 /* Pods-Ev3nt-Ev3ntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-Ev3ntTests.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Ev3nt/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D729C4275EA53A6563EE7A11 /* Pods-Ev3nt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt/Pods-Ev3nt.release.xcconfig"; sourceTree = "<group>"; };
-		DDEB8C76B217CF76B9302228 /* libPods-Ev3nt-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ev3nt-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* BaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaryTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Bary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Bary/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Bary/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Bary/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Bary/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Bary/main.m; sourceTree = "<group>"; };
+		1480895387CC4A687B754E47 /* libPods-Bary-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bary-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6579958051F9EFCF5FD5F8 /* Pods-Bary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary.debug.xcconfig"; path = "Target Support Files/Pods-Bary/Pods-Bary.debug.xcconfig"; sourceTree = "<group>"; };
+		245A007AB42BF9929379149B /* Pods-Bary-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Bary-tvOS/Pods-Bary-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2A10C0BE46D278E02C597175 /* Pods-Bary-BaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary-BaryTests.debug.xcconfig"; path = "Target Support Files/Pods-Bary-BaryTests/Pods-Bary-BaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Bary-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bary-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Bary-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bary-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E71309622D68E001D114E0 /* Pods-Bary-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Bary-tvOSTests/Pods-Bary-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A87705BBA34E5C6A6F0E65F /* Pods-Bary-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Bary-tvOSTests/Pods-Bary-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D68561B2E4174FF0FEB80F7 /* libPods-Bary-BaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bary-BaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C8728F47BA2ABAFA7E4D83 /* libPods-Bary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E4A3F3336822C3E117D036 /* Pods-Bary-BaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary-BaryTests.release.xcconfig"; path = "Target Support Files/Pods-Bary-BaryTests/Pods-Bary-BaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Bary/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D729C4275EA53A6563EE7A11 /* Pods-Bary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary.release.xcconfig"; path = "Target Support Files/Pods-Bary/Pods-Bary.release.xcconfig"; sourceTree = "<group>"; };
+		DDEB8C76B217CF76B9302228 /* libPods-Bary-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bary-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F80857A928E60014002FF8DA /* Poppins Thin Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins Thin Italic.ttf"; path = "../assets/font/Poppins Thin Italic.ttf"; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 		F80857CC28E60015002FF8DA /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-LightItalic.ttf"; path = "../assets/font/RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		F80857CD28E60015002FF8DA /* Poppins ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins ExtraBold.ttf"; path = "../assets/font/Poppins ExtraBold.ttf"; sourceTree = "<group>"; };
 		F884016F29074867002AA5A8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		F884017129074883002AA5A8 /* Ev3nt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Ev3nt.entitlements; path = Ev3nt/Ev3nt.entitlements; sourceTree = "<group>"; };
-		FFFC24901C32261871D2F421 /* Pods-Ev3nt-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ev3nt-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F884017129074883002AA5A8 /* Bary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Bary.entitlements; path = Bary/Bary.entitlements; sourceTree = "<group>"; };
+		FFFC24901C32261871D2F421 /* Pods-Bary-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bary-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Bary-tvOS/Pods-Bary-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AFE82491BB07059DD9A2FB0 /* libPods-Ev3nt-Ev3ntTests.a in Frameworks */,
+				4AFE82491BB07059DD9A2FB0 /* libPods-Bary-BaryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BACEAEEC544483071F4EB2F /* libPods-Ev3nt.a in Frameworks */,
+				6BACEAEEC544483071F4EB2F /* libPods-Bary.a in Frameworks */,
 				F884017029074867002AA5A8 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046C2D8A01B51360F07A6663 /* libPods-Ev3nt-tvOS.a in Frameworks */,
+				046C2D8A01B51360F07A6663 /* libPods-Bary-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,20 +176,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FDEA1EC28E8EEDBCB49157D /* libPods-Ev3nt-tvOSTests.a in Frameworks */,
+				2FDEA1EC28E8EEDBCB49157D /* libPods-Bary-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* Ev3ntTests */ = {
+		00E356EF1AD99517003FC87E /* BaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* Ev3ntTests.m */,
+				00E356F21AD99517003FC87E /* BaryTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = Ev3ntTests;
+			path = BaryTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -200,10 +200,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Ev3nt */ = {
+		13B07FAE1A68108700A75B9A /* Bary */ = {
 			isa = PBXGroup;
 			children = (
-				F884017129074883002AA5A8 /* Ev3nt.entitlements */,
+				F884017129074883002AA5A8 /* Bary.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -212,7 +212,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = Ev3nt;
+			name = Bary;
 			sourceTree = "<group>";
 		};
 		162AA7D0BACC4AC1A36071F5 /* Resources */ = {
@@ -265,10 +265,10 @@
 				F884016F29074867002AA5A8 /* GameKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				54C8728F47BA2ABAFA7E4D83 /* libPods-Ev3nt.a */,
-				4D68561B2E4174FF0FEB80F7 /* libPods-Ev3nt-Ev3ntTests.a */,
-				1480895387CC4A687B754E47 /* libPods-Ev3nt-tvOS.a */,
-				DDEB8C76B217CF76B9302228 /* libPods-Ev3nt-tvOSTests.a */,
+				54C8728F47BA2ABAFA7E4D83 /* libPods-Bary.a */,
+				4D68561B2E4174FF0FEB80F7 /* libPods-Bary-BaryTests.a */,
+				1480895387CC4A687B754E47 /* libPods-Bary-tvOS.a */,
+				DDEB8C76B217CF76B9302228 /* libPods-Bary-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,14 +276,14 @@
 		7845E6F53AB577CD321DA972 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1D6579958051F9EFCF5FD5F8 /* Pods-Ev3nt.debug.xcconfig */,
-				D729C4275EA53A6563EE7A11 /* Pods-Ev3nt.release.xcconfig */,
-				2A10C0BE46D278E02C597175 /* Pods-Ev3nt-Ev3ntTests.debug.xcconfig */,
-				61E4A3F3336822C3E117D036 /* Pods-Ev3nt-Ev3ntTests.release.xcconfig */,
-				245A007AB42BF9929379149B /* Pods-Ev3nt-tvOS.debug.xcconfig */,
-				FFFC24901C32261871D2F421 /* Pods-Ev3nt-tvOS.release.xcconfig */,
-				4A87705BBA34E5C6A6F0E65F /* Pods-Ev3nt-tvOSTests.debug.xcconfig */,
-				34E71309622D68E001D114E0 /* Pods-Ev3nt-tvOSTests.release.xcconfig */,
+				1D6579958051F9EFCF5FD5F8 /* Pods-Bary.debug.xcconfig */,
+				D729C4275EA53A6563EE7A11 /* Pods-Bary.release.xcconfig */,
+				2A10C0BE46D278E02C597175 /* Pods-Bary-BaryTests.debug.xcconfig */,
+				61E4A3F3336822C3E117D036 /* Pods-Bary-BaryTests.release.xcconfig */,
+				245A007AB42BF9929379149B /* Pods-Bary-tvOS.debug.xcconfig */,
+				FFFC24901C32261871D2F421 /* Pods-Bary-tvOS.release.xcconfig */,
+				4A87705BBA34E5C6A6F0E65F /* Pods-Bary-tvOSTests.debug.xcconfig */,
+				34E71309622D68E001D114E0 /* Pods-Bary-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -298,9 +298,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Ev3nt */,
+				13B07FAE1A68108700A75B9A /* Bary */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* Ev3ntTests */,
+				00E356EF1AD99517003FC87E /* BaryTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				7845E6F53AB577CD321DA972 /* Pods */,
@@ -314,10 +314,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Ev3nt.app */,
-				00E356EE1AD99517003FC87E /* Ev3ntTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* Ev3nt-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* Ev3nt-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Bary.app */,
+				00E356EE1AD99517003FC87E /* BaryTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Bary-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Bary-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,9 +325,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* Ev3ntTests */ = {
+		00E356ED1AD99517003FC87E /* BaryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Ev3ntTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BaryTests" */;
 			buildPhases = (
 				1E74BB4B5EC2F05BDC9FADC5 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -341,14 +341,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = Ev3ntTests;
-			productName = Ev3ntTests;
-			productReference = 00E356EE1AD99517003FC87E /* Ev3ntTests.xctest */;
+			name = BaryTests;
+			productName = BaryTests;
+			productReference = 00E356EE1AD99517003FC87E /* BaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Ev3nt */ = {
+		13B07F861A680F5B00A75B9A /* Bary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Ev3nt" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Bary" */;
 			buildPhases = (
 				2938F77DF72D451666BE1999 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -363,14 +363,14 @@
 			);
 			dependencies = (
 			);
-			name = Ev3nt;
-			productName = Ev3nt;
-			productReference = 13B07F961A680F5B00A75B9A /* Ev3nt.app */;
+			name = Bary;
+			productName = Bary;
+			productReference = 13B07F961A680F5B00A75B9A /* Bary.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* Ev3nt-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Bary-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Bary-tvOS" */;
 			buildPhases = (
 				6E91786E37259E1E57014B2C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -384,14 +384,14 @@
 			);
 			dependencies = (
 			);
-			name = "Ev3nt-tvOS";
-			productName = "Ev3nt-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* Ev3nt-tvOS.app */;
+			name = "Bary-tvOS";
+			productName = "Bary-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Bary-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* Ev3nt-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Bary-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Bary-tvOSTests" */;
 			buildPhases = (
 				219130FDAA9CE49A687657B2 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -403,9 +403,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "Ev3nt-tvOSTests";
-			productName = "Ev3nt-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* Ev3nt-tvOSTests.xctest */;
+			name = "Bary-tvOSTests";
+			productName = "Bary-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Bary-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -436,7 +436,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Ev3nt" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Bary" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -449,10 +449,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Ev3nt */,
-				00E356ED1AD99517003FC87E /* Ev3ntTests */,
-				2D02E47A1E0B4A5D006451C7 /* Ev3nt-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* Ev3nt-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Bary */,
+				00E356ED1AD99517003FC87E /* BaryTests */,
+				2D02E47A1E0B4A5D006451C7 /* Bary-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Bary-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -558,7 +558,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-Ev3ntTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bary-BaryTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -580,7 +580,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bary-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -602,7 +602,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bary-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -629,7 +629,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bary-BaryTests/Pods-Bary-BaryTests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core-60309c9c/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -638,7 +638,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bary-BaryTests/Pods-Bary-BaryTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6AD9F577C2BC67CB855DE5C6 /* [CP] Embed Pods Frameworks */ = {
@@ -647,7 +647,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bary-BaryTests/Pods-Bary-BaryTests-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/hermes.framework/hermes",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -656,7 +656,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-Ev3ntTests/Pods-Ev3nt-Ev3ntTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bary-BaryTests/Pods-Bary-BaryTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6E91786E37259E1E57014B2C /* [CP] Check Pods Manifest.lock */ = {
@@ -674,7 +674,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Ev3nt-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bary-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -687,7 +687,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bary/Pods-Bary-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/hermes.framework/hermes",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -696,7 +696,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bary/Pods-Bary-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DC657B365810A4137777FD6 /* [CP] Copy Pods Resources */ = {
@@ -705,7 +705,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bary/Pods-Bary-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core-60309c9c/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -714,7 +714,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt/Pods-Ev3nt-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bary/Pods-Bary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F591DDDEBAB5B6E3F33F612A /* [CP] Copy Pods Resources */ = {
@@ -723,7 +723,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bary-tvOS/Pods-Bary-tvOS-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -732,7 +732,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ev3nt-tvOS/Pods-Ev3nt-tvOS-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bary-tvOS/Pods-Bary-tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -780,7 +780,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* Ev3ntTests.m in Sources */,
+				00E356F31AD99517003FC87E /* BaryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,7 +806,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* Ev3ntTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* BaryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,12 +815,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Ev3nt */;
+			target = 13B07F861A680F5B00A75B9A /* Bary */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* Ev3nt-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Bary-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -828,7 +828,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A10C0BE46D278E02C597175 /* Pods-Ev3nt-Ev3ntTests.debug.xcconfig */;
+			baseConfigurationReference = 2A10C0BE46D278E02C597175 /* Pods-Bary-BaryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -836,7 +836,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Ev3ntTests/Info.plist;
+				INFOPLIST_FILE = BaryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -846,18 +846,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt.app/Ev3nt";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bary.app/Bary";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61E4A3F3336822C3E117D036 /* Pods-Ev3nt-Ev3ntTests.release.xcconfig */;
+			baseConfigurationReference = 61E4A3F3336822C3E117D036 /* Pods-Bary-BaryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = Ev3ntTests/Info.plist;
+				INFOPLIST_FILE = BaryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -867,24 +867,24 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt.app/Ev3nt";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bary.app/Bary";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D6579958051F9EFCF5FD5F8 /* Pods-Ev3nt.debug.xcconfig */;
+			baseConfigurationReference = 1D6579958051F9EFCF5FD5F8 /* Pods-Bary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Ev3nt/Ev3nt.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Bary/Bary.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6W6NX673A2;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Ev3nt/Info.plist;
+				INFOPLIST_FILE = Bary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -892,8 +892,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.makerare.Ev3nt;
-				PRODUCT_NAME = Ev3nt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makerare.Bary;
+				PRODUCT_NAME = Bary;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -904,17 +904,17 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D729C4275EA53A6563EE7A11 /* Pods-Ev3nt.release.xcconfig */;
+			baseConfigurationReference = D729C4275EA53A6563EE7A11 /* Pods-Bary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Ev3nt/Ev3nt.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Bary/Bary.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Pierre-André LONG (6W6NX673A2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Pierre-André LONG (6W6NX673A2)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6W6NX673A2;
-				INFOPLIST_FILE = Ev3nt/Info.plist;
+				INFOPLIST_FILE = Bary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -922,9 +922,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.makerare.Ev3nt;
-				PRODUCT_NAME = Ev3nt;
-				PROVISIONING_PROFILE_SPECIFIER = appStoreEv3nt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makerare.Bary;
+				PRODUCT_NAME = Bary;
+				PROVISIONING_PROFILE_SPECIFIER = appStoreBary;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -933,7 +933,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 245A007AB42BF9929379149B /* Pods-Ev3nt-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 245A007AB42BF9929379149B /* Pods-Bary-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -944,14 +944,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Ev3nt-tvOS/Info.plist";
+				INFOPLIST_FILE = "Bary-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Bary-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -961,7 +961,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFFC24901C32261871D2F421 /* Pods-Ev3nt-tvOS.release.xcconfig */;
+			baseConfigurationReference = FFFC24901C32261871D2F421 /* Pods-Bary-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -972,14 +972,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Ev3nt-tvOS/Info.plist";
+				INFOPLIST_FILE = "Bary-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Bary-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -989,7 +989,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A87705BBA34E5C6A6F0E65F /* Pods-Ev3nt-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 4A87705BBA34E5C6A6F0E65F /* Pods-Bary-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -999,24 +999,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Ev3nt-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Bary-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Bary-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt-tvOS.app/Ev3nt-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bary-tvOS.app/Bary-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34E71309622D68E001D114E0 /* Pods-Ev3nt-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 34E71309622D68E001D114E0 /* Pods-Bary-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1026,17 +1026,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Ev3nt-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Bary-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Ev3nt-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Bary-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ev3nt-tvOS.app/Ev3nt-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bary-tvOS.app/Bary-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
@@ -1159,7 +1159,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Ev3ntTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BaryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1168,7 +1168,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Ev3nt" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Bary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1177,7 +1177,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Bary-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1186,7 +1186,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Ev3nt-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Bary-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1195,7 +1195,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Ev3nt" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Bary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

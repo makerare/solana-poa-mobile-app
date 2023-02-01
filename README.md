@@ -1,1 +1,2 @@
-# React-Native Ev3nt wallet
+# React-Native Bary wallet
+

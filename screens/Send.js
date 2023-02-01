@@ -762,11 +762,14 @@ const Send = ( props ) => {
                                                     onPress={async () => {
                                                       //const balance = Number(await getBalance(account.keyPair.publicKey.toString()));
                                                       //if (balance > gottenAmount)
+                                                      let resFeesAndBalance = {};
                                                       try {
-                                                        const resFeesAndBalance = await getFeesAndBalance(account.keyPair, toAddress, selectedNFT, 1);
+                                                        resFeesAndBalance = await getFeesAndBalance(account.keyPair, toAddress, selectedNFT, 1e-8);
+                                                        console.log(resFeesAndBalance)
                                                       } catch (e) {
                                                         console.log('Error when fetching fees and balance.' + e)
                                                       }
+
                                                       if (resFeesAndBalance.empty) {
                                                         setAmountContent("");
                                                         showMessage({
