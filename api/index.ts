@@ -1,5 +1,9 @@
 import * as solanaWeb3 from "@solana/web3.js";
-import { PublicKey } from "@solana/web3.js";
+import {
+  PublicKey,
+  Transaction,
+  TransactionInstruction
+} from "@solana/web3.js";
 import {
   getOrCreateAssociatedTokenAccount,
   createAssociatedTokenAccountInstruction,
@@ -12,6 +16,7 @@ import {
 
 import { ENV } from "../constants"
 
+import tweetnacl from "tweetnacl";
 
 import axios from "axios";
 
@@ -27,11 +32,13 @@ if (typeof BigInt === 'undefined') global.BigInt = require('big-integer')
 
 
 const createConnection = async () => {
-  //global.rpc = 'https://api.mainnet-beta.solana.com';
-
-  if (!(global.rpc))
-    global.rpc = (await axios.get(ENV.get_rpc_url)).data.rpc_url;
-  return new solanaWeb3.Connection(global.rpc);
+  if (!(global.rpc)) {
+    global.rpc = (await axios.get(ENV.rpc_api_url)).data.rpc_url;
+  }
+  if (!(global.connection)) {
+    global.connection = new solanaWeb3.Connection(global.rpc);
+  }
+  return global.connection
 };
 
 
@@ -72,7 +79,6 @@ const getBalance = async (publicKey) => {
 
 
 const getFeesAndBalance = async (from, toAddress, selectedNFT, amount) => {
-  console.log('getFeesAndBalance');
   const connection = await createConnection();
   const fromPubkey = from.publicKey;
 
@@ -715,13 +721,62 @@ const getAllTokens = async (publicKeyString: string) =>{
 }
 
 
-const claim_nft_api = async (claim_id, pubKeyString) => {
+export const breed_nft = async (pubKeyString) => {
   const request_result = await axios.get(
-    `${ENV.claim_api_url}?claimid=${claim_id}&pubkey=${pubKeyString}`,
+    `${ENV.breed_api_url}&pubkey=${pubKeyString}`,
     {timeout: 360000}
+  );
+
+  return request_result;
+}
+
+
+const mint_nft_api = async (collection_name, mint_id, pubKeyString) => {
+  const request_result = await axios.get(
+    `${ENV.mint_api_url}`
+    + `&collection_name=${collection_name}`
+    + `&mint_id=${mint_id}`
+    + `&pubkey=${pubKeyString}`,
+    { timeout: 360000 }
   ) ;
   return request_result;
 }
+
+
+const encodedURIComponentToUint8Array = function(s) {
+  if (typeof s !== 'string') throw new TypeError('expected string');
+  var i, d = unescape(s), b = new Uint8Array(d.length);
+  for (i = 0; i < d.length; i++) b[i] = d.charCodeAt(i);
+  return b;
+};
+
+
+const uint8ArrayToencodedURIComponent = function(arr) {
+  var i, s = [];
+  for (i = 0; i < arr.length; i++) s.push(String.fromCharCode(arr[i]));
+  return (escape(s.join('')));
+};
+
+
+export const sign_and_submit_data_api = async (sign_data, keyPair) => {
+  const encoded_sign_data = encodeURIComponent(sign_data);
+
+  const message = encodedURIComponentToUint8Array(sign_data);
+
+  const signature = tweetnacl.sign.detached(message, keyPair.secretKey);
+  const signature_str = uint8ArrayToencodedURIComponent(signature)
+
+  const request_result = await axios.get(
+    `${ENV.sign_api_url}`
+    +`&message=${encodeURIComponent(sign_data)}`
+    +`&signature=${signature_str}`
+    +`&pubkey=${keyPair.publicKey.toBytes()}`,
+    {timeout: 360000}
+  );
+  return request_result;
+}
+
+
 
 export {
   LAMPORTS_PER_SOL,
@@ -738,5 +793,5 @@ export {
   getFeesAndBalance,
   isValidAddress,
   sendTx,
-  claim_nft_api
+  mint_nft_api
 };

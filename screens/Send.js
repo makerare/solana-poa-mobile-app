@@ -855,7 +855,6 @@ const Send = ( props ) => {
                               try {
                                 await sendTx(account.keyPair, toAddress, selectedNFT, amount);
                               } catch (e) {
-                                console.log(e);
                                 return showMessage({
                                     message: "Error",
                                     description: "" + e,

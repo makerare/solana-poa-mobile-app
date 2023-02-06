@@ -9,6 +9,8 @@ export const COLORS = {
     green: "#66D59A",
     lightGreen: "#E6FEF0",
 
+    navigationIcons: "#ffffff",
+
     lime: "#000000",
     limer: "#000000",
     emerald: "#222222",

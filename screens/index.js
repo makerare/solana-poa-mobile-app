@@ -8,6 +8,7 @@ import Send from "./Send"
 import Import from "./Import"
 import Item from "./Item"
 import Loading from "./Loading"
+import Breed from "./Breed"
 
 export {
     Home,
@@ -19,5 +20,6 @@ export {
     Send,
     Item,
     Import,
-    Loading
+    Loading,
+    Breed
 };

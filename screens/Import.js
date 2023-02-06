@@ -254,7 +254,7 @@ const Import = ({ navigation }) => {
         style={{ flex: 1, }}
     >
         <LinearGradient
-            colors={[COLORS.lime, COLORS.emerald]}
+            colors={[COLORS.lime,COLORS.emerald ]}
             style={{ flex: 1, }}
         >
             <ScrollView style={{marginHorizontal: 0,}}

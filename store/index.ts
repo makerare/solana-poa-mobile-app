@@ -79,5 +79,7 @@ const store = createStore<WalletModel>(
 //if (Platform.OS === 'ios')
 let initialState = store.getState();
 
+console.log(initialState)
+
 
 export default store;

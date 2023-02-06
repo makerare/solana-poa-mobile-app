@@ -154,7 +154,7 @@ const Tabs = () => {
                             style={{
                                 width: 25,
                                 height: 25,
-                                tintColor: focused ? COLORS.white : COLORS.white
+                                tintColor: focused ? COLORS.navigationIcons : COLORS.navigationIcons
                             }}
                         />
                     ),
@@ -176,7 +176,7 @@ const Tabs = () => {
                             style={{
                                 width: 25,
                                 height: 25,
-                                tintColor: focused ? COLORS.white : COLORS.white
+                                tintColor: focused ? COLORS.navigationIcons : COLORS.navigationIcons
                             }}
                         />
                     ),
@@ -198,7 +198,7 @@ const Tabs = () => {
                             style={{
                                 width: 25,
                                 height: 25,
-                                tintColor: focused ? COLORS.white : COLORS.white
+                                tintColor: focused ? COLORS.navigationIcons : COLORS.navigationIcons
                             }}
                         />
                     ),

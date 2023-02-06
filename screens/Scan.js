@@ -21,7 +21,7 @@ import { Spinner } from "../components";
 
 import { accountFromSeed } from "../utils";
 
-import { isValidAddress, claim_nft_api } from "../api";
+import { isValidAddress, mint_nft_api, sign_and_submit_data_api } from "../api";
 
 
 import { useIsFocused } from '@react-navigation/native';
@@ -33,6 +33,8 @@ const { StatusBarManager } = NativeModules
 
 
 let first = true;
+
+let scanner = null;
 
 const get_url_params = (fullUrl) => {
   const urlParts = fullUrl.split('?');
@@ -49,21 +51,58 @@ const get_url_params = (fullUrl) => {
       out_obj[paramFullSlipt[0]] = paramFullSlipt[1];
   }
   return out_obj;
-
 }
 
 
-const claim_nft = async (claim_id, pubKey, nftClaimInProcess, setNftClaimInProcess) => {
+const sign_and_submit_data = async (
+  sign_data,
+  keyPair,
+  nftClaimInProcess,
+  setNftClaimInProcess,
+  navigation
+) => {
+  if (nftClaimInProcess)
+    return;
+  setNftClaimInProcess(true)
+  try{
+    const result_apicall = await sign_and_submit_data_api(sign_data, keyPair);
+
+     if (result_apicall.data?.error !== undefined)
+        throw "" + result_apicall.data?.error;
+
+    global.successTx = true
+  } catch (e) {
+    global.successTx = false
+    global.errorMsg = "" + e
+  }
+
+  navigation.navigate('Home');
+  setNftClaimInProcess(false)
+}
+
+
+
+
+const mint_nft = async (
+  mint_id,
+  collection_name,
+  pubKey,
+  nftClaimInProcess,
+  setNftClaimInProcess,
+  navigation
+) => {
   if (nftClaimInProcess)
     return;
   setNftClaimInProcess(true)
   try{
 
-    const result_apicall = await claim_nft_api(claim_id, pubKey);
+    const result_apicall = await mint_nft_api(collection_name, mint_id, pubKey);
     console.log("Minted NFT");
     console.log(result_apicall);
-     if (result_apicall.data?.success === undefined)
-        throw "Unkown.";
+
+    if (result_apicall.data?.error !== undefined)
+       throw "" + result_apicall.data?.error;
+
 
     showMessage({
                 message: "Success",
@@ -85,6 +124,7 @@ const claim_nft = async (claim_id, pubKey, nftClaimInProcess, setNftClaimInProce
   }
 
   setNftClaimInProcess(false)
+  navigation.navigate('Home');
 }
 
 
@@ -197,28 +237,55 @@ const Scan = ( props ) => {
                 }}
             >
               <View style={{ flex: 1, alignItems: 'center'}}>
-                  <Text style={{ ...FONTS.h4 }}>Scan to claim NFT or make transaction</Text>
+                  <Text style={{ ...FONTS.h4 }}>Scan to mint NFT or make transaction</Text>
               </View>
             </View>
         )
     }
 
     const onSuccessScan = async (e) => {
+      console.log("scanned"+e)
       try {
+        if (e.data.startsWith('sign:')) {
+          const sign_data = e.data
+
+          const currentAccount = accounts[0];
+          const keyPair = accountFromSeed(
+            wallet.seed,
+            currentAccount.index,
+            currentAccount.derivationPath,
+            0
+          );
+
+          await sign_and_submit_data(
+            sign_data,
+            keyPair,
+            nftClaimInProcess,
+            setNftClaimInProcess,
+            props.navigation
+          )
+
+          return;
+        }
         if (e.data.startsWith('http')) {
           const urlParams = get_url_params(e.data)
-          if (urlParams.claimid != undefined) {
-            const claim_id = urlParams.claimid;
+          if (urlParams.mint_id !== undefined && urlParams.collection_name !== undefined) {
+            const mint_id = urlParams.mint_id;
+            const collection_name = urlParams.collection_name;
             const currentAccount = accounts[0];
             const keyPair = accountFromSeed(
-                wallet.seed,
-                currentAccount.index,
-                currentAccount.derivationPath,
-                0);
-            const res = await claim_nft(claim_id,
-                                        keyPair.publicKey.toString(),
-                                        nftClaimInProcess,
-                                        setNftClaimInProcess
+              wallet.seed,
+              currentAccount.index,
+              currentAccount.derivationPath,
+              0
+            );
+            const res = await mint_nft(
+              mint_id,
+              collection_name,
+              keyPair.publicKey.toString(),
+              nftClaimInProcess,
+              setNftClaimInProcess,
+              props.navigation
             );
             return;
           }
@@ -228,8 +295,7 @@ const Scan = ( props ) => {
         if (await isValidAddress(e.data)) {
           const passedData = props.route?.params ? props.route?.params : {}
           passedData.toAddress = e.data;
-          props.navigation.navigate('Send',
-                                    passedData)
+          props.navigation.navigate('Send', passedData)
           return;
         }
         throw 'Error';
@@ -244,38 +310,35 @@ const Scan = ( props ) => {
                     duration: 3000
                   });
       }
-
+    scanner.reactivate()
     };
-
+    //(async ()=>{await new Promise(r => setTimeout(r, 2000));onSuccessScan({data: "sign:test"}); })()
 
   return (
       <View style={{flex: 1, backgroundColor: COLORS.black,}}>
-      { useIsFocused()  && <FlashMessage position={"top"} hideStatusBar={false} statusBarHeight={Platform.OS === "ios" ? null : statusBarHeight} />}
-      { useIsFocused()  && <QRCodeScanner
-        flashMode={RNCamera.Constants.FlashMode.off}
-        style={{ flex: 1, position: 'absolute', top: 0,  }}
-        reactivate={true}
-        reactivateTimeout={60000}
-        showMarker={true}
-        customMarker={renderScanFocus()}
-        captureAudio={false}
-              onRead={onSuccessScan}
-              containerStyle={{height:SIZES.height + 65}}
-              cameraStyle={[{height:SIZES.height + 65}]}
-              cameraContainerStyle={{ position: 'absolute', top: 0, height: SIZES.height + 65
-            }}
-              topViewStyle={{height: 0}}
-              bottomViewStyle={{height: 0}}
-            />}
-        {renderHeader()}
+        { useIsFocused()  && <QRCodeScanner
+          flashMode={RNCamera.Constants.FlashMode.off}
+          style={{ flex: 1, position: 'absolute', top: 0,  }}
+          reactivate={true}
+          reactivateTimeout={60000}
+          showMarker={true}
+          customMarker={renderScanFocus()}
+          captureAudio={false}
+          onRead={onSuccessScan}
+          containerStyle={{height:SIZES.height + 65}}
+          cameraStyle={[{height:SIZES.height + 65}]}
+          cameraContainerStyle={{ position: 'absolute', top: 0, height: SIZES.height + 65}}
+          topViewStyle={{height: 0}}
+          bottomViewStyle={{height: 0}}
+          //ref={(node) => { scanner = node }}
+        /> }
+        { renderHeader() }
         { useIsFocused() && <Spinner
-        visible={nftClaimInProcess}
-        textContent={'Mint in progess...'}
-        textStyle={
-          {color: 'white'}
-        }
-        overlayColor={"#000000AA"}
-      />}
+          visible={nftClaimInProcess}
+          textContent={'In progess...'}
+          textStyle={{color: 'white'}}
+          overlayColor={"#000000AA"}
+        /> }
       </View>
   )
 

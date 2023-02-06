@@ -372,8 +372,13 @@ class WalletManagementMenu extends Component {
     }
   }
   changeLayoutMenu = () => {
-    let animTime = this.state.expanded ? 100 : 200;
-    LayoutAnimation.configureNext(LayoutAnimation.create(animTime, 'easeInEaseOut', 'opacity'));
+    let animTime = 100;
+    let animeType= "opacity";
+
+    if (Platform.OS === "android")
+      animeType = "scaleXY"
+
+    LayoutAnimation.configureNext(LayoutAnimation.create(animTime, 'easeInEaseOut', animeType));
 
     var that = this;
     const myTimeout = setTimeout(  function myStopFunction() {
@@ -437,6 +442,11 @@ class WalletManagementMenu extends Component {
                 onPress={()=>{
                   if (!this.state.expanded)
                     return;
+
+
+                  this.props.setScreenActiveState.setScreenActive(false);
+                  this.props.setScreenActiveState.screenActive = false;
+
                   this.props.navigation.navigate('Backup')
                   this.closeLayoutMenu();
                 }}
@@ -461,9 +471,12 @@ class WalletManagementMenu extends Component {
                             color: this.state.expanded_over ? COLORS.primary : 'transparent' ,}}>Export wallet</Text>
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={()=>{
+                onPress={async ()=>{
                   if (!this.state.expanded)
                     return;
+                  this.props.setScreenActiveState.setScreenActive(false);
+                  this.props.setScreenActiveState.screenActive = false;
+
                   this.props.navigation.navigate('Import')
                   this.closeLayoutMenu();
                 }}
@@ -500,9 +513,14 @@ let isMounted = false;
 const Wallet = ( props ) => {
   const wallet = useStoreState((state) => state.wallet);
   const accounts = useStoreState((state) => state.accounts);
-  const screenVisible= useIsFocused()
+  const screenVisible = useIsFocused()
   const [screenActive, setScreenActive] = useState(false);
   const [isTransactionsRefreshing, setIsTransactionsRefreshing] = useState(false);
+
+  const setScreenActiveState = {
+    screenActive,
+    setScreenActive
+  }
 
   async function refreshTransactions() {
      setIsTransactionsRefreshing(true)
@@ -540,12 +558,15 @@ const Wallet = ( props ) => {
    useEffect(() => {
      isMounted = true;
      const unsubscribeFocus = props.navigation.addListener('focus', async () => {
-       setScreenActive(true)
+       setScreenActive(true);
+       setScreenActiveState.screenActive = true;
+
        refreshTransactions()
        if (global.successTx) {
          global.successTx = false
+         global.errorMsg = null
          await new Promise(r => setTimeout(r, 700));
-         return showMessage({
+         showMessage({
                      message: "Success",
                      description: "Transaction was successefuly submitted.",
                      type: "success",
@@ -553,11 +574,24 @@ const Wallet = ( props ) => {
                      position: 'top',
                      duration: 3000
                    });
-              }
-      });
+      } else if (global.errorMsg){
+        const err = global.errorMsg
+        global.errorMsg = null
+        await new Promise(r => setTimeout(r, 700));
+        showMessage({
+                    message: "Cannot proceed to breeding",
+                    description: err + "",
+                    type: "danger",
+                    icon: "danger",
+                    position: 'top',
+                    duration: 3000
+                  });
+      }
+    })
 
       const unsubscribeBlur = props.navigation.addListener('blur', async () => {
-        setScreenActive(false)
+        setScreenActive(true);
+        setScreenActiveState.screenActive = true;
        });
      //refreshTransactions();
 
@@ -585,7 +619,6 @@ const Wallet = ( props ) => {
   const btnWidth = 70;
   const btnMargin = 30;
   const btnPadding = 18;
-  //{useIsFocused() &&<FlashMessage position={"top"} hideStatusBar={false} statusBarHeight={Platform.OS === "ios" ? null : statusBarHeight}  />}
 
 function renderHeaderWallet() {
     return (
@@ -619,7 +652,11 @@ function renderHeaderWallet() {
 
                             <TouchableOpacity
                             activeOpacity={0.5}
-                            onPress={()=>props.navigation.navigate('Send')}
+                            onPress={()=>{
+                              setScreenActive(false);
+                              setScreenActiveState.screenActive = false;
+                              props.navigation.navigate('Send')
+                            }}
                                 style={{
                                     height: btnHeight,
                                     maxWidth: btnWidth,
@@ -644,7 +681,11 @@ function renderHeaderWallet() {
 
                             <TouchableOpacity
                             activeOpacity={0.5}
-                                onPress={()=>props.navigation.navigate('Recieve')}
+                                onPress={()=>{
+                                  setScreenActive(false);
+                                  setScreenActiveState.screenActive = false;
+                                  props.navigation.navigate('Recieve')
+                                }}
                                 style={{
                                     height: btnHeight,
                                     maxWidth: btnWidth,
@@ -692,7 +733,7 @@ function renderHeaderWallet() {
                         }}>TRANSACTIONS</Text>
             </View>
             </View>
-          <WalletManagementMenu statusBarHeight={statusBarHeight} navigation={props.navigation} />
+          <WalletManagementMenu statusBarHeight={statusBarHeight} navigation={props.navigation} setScreenActiveState={setScreenActiveState} />
         </View>
       </>
     )
@@ -707,6 +748,7 @@ function renderTransactions() {
  * @format
  * @flow strict-local
  */
+
    const noTransactions = (
      <View>
         <View style={{
@@ -799,11 +841,20 @@ function renderTransactions() {
     )
 }
 
+
     return (
+
+      <>
+      { screenActive && screenVisible ? (<FlashMessage
+        position={"top"}
+        hideStatusBar={false}
+        statusBarHeight={Platform.OS === "ios" ? null : statusBarHeight}
+      />) : null}
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightGray}}>
             {renderHeaderWallet()}
             {renderTransactions()}
         </SafeAreaView>
+</>
     )
 }
 

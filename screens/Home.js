@@ -12,6 +12,8 @@ import {
 } from "react-native"
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 
+import FlashMessage, {showMessage,} from "react-native-flash-message";
+
 
 
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
@@ -24,6 +26,8 @@ let { StatusBarManager } = NativeModules
 import {useStoreState} from "../hooks/storeHooks"
 
 import { getBottomSpace } from 'react-native-iphone-x-helper'
+
+import { useIsFocused } from '@react-navigation/native';
 
 import {
   SPL_TOKEN,
@@ -40,6 +44,7 @@ import Video from "react-native-video";
 let isMountedHome = false;
 
 
+
 const Home = ( props ) => {
   const wallet = useStoreState((state) => state.wallet, (prev, next) => prev.wallet.seed === next.wallet.seed);
   const accounts = useStoreState((state) => state.accounts);
@@ -47,6 +52,15 @@ const Home = ( props ) => {
   const [statusBarHeight, setStatusBarHeight]  = useState(StatusBarHeight)
   const [ownedNfts, setOwnedNfts] = React.useState([])
   const [isNftsRefreshing, setIsNftsRefreshing] = useState(false);
+
+  const screenVisible = useIsFocused()
+  const [screenActive, setScreenActive] = useState(false);
+  const [isTransactionsRefreshing, setIsTransactionsRefreshing] = useState(false);
+
+  const setScreenActiveState = {
+    screenActive,
+    setScreenActive
+  }
 
   useEffect(()=>
     {
@@ -56,6 +70,72 @@ const Home = ( props ) => {
         )
     }
    );
+
+
+
+      useEffect(() => {
+        const unsubscribeFocus = props.navigation.addListener('focus', async () => {
+          setScreenActive(true);
+          setScreenActiveState.screenActive = true;
+
+          if (global.successTx) {
+            global.successTx = false
+            global.errorMsg = null
+            await new Promise(r => setTimeout(r, 700));
+            showMessage({
+                        message: "Success.",
+                        description: "Operation successful.",
+                        type: "success",
+                        icon: "success",
+                        position: 'top',
+                        duration: 3000
+                      });
+         } else if (global.errorMsg){
+           const err = global.errorMsg
+           global.errorMsg = null
+           await new Promise(r => setTimeout(r, 700));
+
+           showMessage({
+                       message: "Error",
+                       description: err + "",
+                       type: "danger",
+                       icon: "danger",
+                       position: 'top',
+                       duration: 3000
+                     });
+         }
+       })
+
+         const unsubscribeBlur = props.navigation.addListener('blur', async () => {
+           setScreenActive(true);
+           setScreenActiveState.screenActive = true;
+          });
+
+        return () => {
+          unsubscribeFocus();
+          unsubscribeBlur();
+        }
+      }, [props.navigation]);
+
+
+   async function tryBreed() {
+     try{
+       if(!ownedNfts.length)
+        throw ""
+       setScreenActive(false);
+       setScreenActiveState.screenActive = false;
+       props.navigation.navigate('Breed')
+     }catch (e) {
+       showMessage({
+         message: "Nothing to breed",
+         description: "Get assets first!",
+         type: "danger",
+         icon: "danger",
+         position: 'top',
+         duration: 3000
+       });
+     }
+   }
 
     async function refreshNfts() {
       setIsNftsRefreshing(true)
@@ -140,7 +220,7 @@ function renderHeader() {
                 source={images.logo}
                 resizeMode="contain"
                 style={{
-                  width: 150,
+                  width: 200,
                   height: 100,
                   justifyContent: 'center',
                   alignItems: 'center'
@@ -149,6 +229,7 @@ function renderHeader() {
             </View>
             </View>
 
+            {true &&
             <View style={{ position: 'absolute', right: 20, top: 5, }}>
                 <TouchableOpacity
                     style={{
@@ -162,13 +243,14 @@ function renderHeader() {
                         backfaceVisibility: 'visible',
                         borderWidth: 1,
                     }}
+                    onPress={tryBreed}
                 >
                     <Image
                         source={icons.bell}
                         style={{
                             width: 20,
                             height: 20,
-                            tintColor: COLORS.white
+                            tintColor: COLORS.white,
                         }}
                     />
                     <View
@@ -179,12 +261,14 @@ function renderHeader() {
                             height: 10,
                             width: 10,
                             backgroundColor: COLORS.red,
-                            borderRadius: 5
+                            borderRadius: 5,
+                            opacity: !ownedNfts.length ? 0 : null
                         }}
                     >
                     </View>
                 </TouchableOpacity>
-            </View>
+            </View>}
+
             <View style={{ flex: 1 }}>
             <View
                 style={{
@@ -374,10 +458,17 @@ function renderNfts() {
 }
 
     return (
+      <>
+      { (screenActive && screenVisible) ? (<FlashMessage
+        position={"top"}
+        hideStatusBar={false}
+        statusBarHeight={Platform.OS === "ios" ? null : statusBarHeight}
+        />) : null}
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightGray}}>
             {renderHeader()}
             {renderNfts()}
         </SafeAreaView>
+      </>
     )
 }
 
