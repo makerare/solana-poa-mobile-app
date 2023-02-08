@@ -105,9 +105,6 @@ const CustomTabBar = (props) => {
       })
   }, []);
 
-
-
-
         return (
           <>
           <View style={{postion: 'absolute', bottom: 0, width: SIZES.width, height: 20, backgroundColor: COLORS.primary}}>
@@ -130,7 +127,7 @@ const Tabs = () => {
                     position: 'absolute',
                     bottom: 20,
                     borderColor: COLORS.primary,
-                    borderWidth: 10,
+                    borderWidth: (Platform.OS === "ios") ? 2 : 0,
                     left: 0,
                     right: 0,
                     backgroundColor: "transparent",
