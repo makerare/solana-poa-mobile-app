@@ -318,17 +318,17 @@ const Balance =  ( props ) => {
               textAlignVertical: 'bottom'
           }}
       >
-        <Text style={{ //fontFamily: 'Poppins Regular' ,
+        <Text style={{ //fontFamily: 'Poppins-Regular' ,
                       top: 10,
                       fontSize: 38,
                       color: COLORS.white,
                     }}>{props.balData.intVal.toString()}</Text>
-        <Text style={{ //fontFamily: 'Poppins Regular',
+        <Text style={{ //fontFamily: 'Poppins-Regular',
                       fontSize: 32,
                       color: COLORS.white,
                       top: 7,
                     }}>{props.balData.floatVal.toString()} </Text>
-        <Text style={{ //fontFamily: 'Poppins Regular',
+        <Text style={{ //fontFamily: 'Poppins-Regular',
                       fontSize: 20,
                       color: COLORS.white,
                     }}>SOL</Text>
@@ -725,7 +725,7 @@ function renderHeaderWallet() {
                     zIndex: 150,
                 }}
             >
-            <Text style={{ fontFamily: "Poppins Light",
+            <Text style={{ fontFamily: "Poppins-Light",
                           color: COLORS.primary,
                           backgroundColor: COLORS.white,
                           fontSize: 24,

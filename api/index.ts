@@ -720,26 +720,44 @@ const getAllTokens = async (publicKeyString: string) =>{
   return request_results;
 }
 
+const unknown_error = "Unknown error.";
 
 export const breed_nft = async (pubKeyString) => {
-  const request_result = await axios.get(
-    `${ENV.breed_api_url}&pubkey=${pubKeyString}`,
-    {timeout: 360000}
-  );
-
-  return request_result;
+  try {
+    const request_result = await axios.post(
+      ENV.breed_api_url,
+      { pubkey: pubKeyString },
+      {timeout: 360000, headers:{"Content-Type" : "application/json"}},
+    );
+    return request_result;
+  } catch (e) {
+    throw (
+      (e?.response?.data?.error !== undefined) ? 
+      e?.response?.data?.error : 
+      unknown_error
+    )
+  }
 }
 
-
 const mint_nft_api = async (collection_name, mint_id, pubKeyString) => {
-  const request_result = await axios.get(
-    `${ENV.mint_api_url}`
-    + `&collection_name=${collection_name}`
-    + `&mint_id=${mint_id}`
-    + `&pubkey=${pubKeyString}`,
-    { timeout: 360000 }
-  ) ;
-  return request_result;
+  try {
+    const request_result = await axios.post(
+      ENV.mint_api_url,
+      {
+        collection_name: collection_name,
+        mint_id: mint_id,
+        pubkey: pubKeyString,
+      },
+      {timeout: 360000, headers:{"Content-Type" : "application/json"}}
+    );
+    return request_result;
+  } catch (e) {
+    throw (
+      (e?.response?.data?.error !== undefined) ? 
+      e?.response?.data?.error : 
+      unknown_error
+    )
+  }
 }
 
 
@@ -751,29 +769,59 @@ const encodedURIComponentToUint8Array = function(s) {
 };
 
 
-const uint8ArrayToencodedURIComponent = function(arr) {
+const uint8ArrayToEncodedURIComponent = function(arr) {
   var i, s = [];
   for (i = 0; i < arr.length; i++) s.push(String.fromCharCode(arr[i]));
   return (escape(s.join('')));
 };
 
 
+export const encodedURIComponentToInt8Array = function(s) {
+  if (typeof s !== 'string') throw new TypeError('expected string');
+  var i, d = unescape((s)), b = new Uint8Array(d.length);
+  for (i = 0; i < d.length; i++) b[i] = d.charCodeAt(i);
+  return b;
+};
+
+
 export const sign_and_submit_data_api = async (sign_data, keyPair) => {
   const encoded_sign_data = encodeURIComponent(sign_data);
-
-  const message = encodedURIComponentToUint8Array(sign_data);
-
+  
+  const message = encodedURIComponentToUint8Array(encoded_sign_data);
+  
   const signature = tweetnacl.sign.detached(message, keyPair.secretKey);
-  const signature_str = uint8ArrayToencodedURIComponent(signature)
+  const signature_str = uint8ArrayToEncodedURIComponent(signature);
 
-  const request_result = await axios.get(
-    `${ENV.sign_api_url}`
-    +`&message=${encodeURIComponent(sign_data)}`
-    +`&signature=${signature_str}`
-    +`&pubkey=${keyPair.publicKey.toBytes()}`,
-    {timeout: 360000}
-  );
-  return request_result;
+  console.log(tweetnacl.sign.detached.verify(
+    encodedURIComponentToInt8Array(encoded_sign_data),
+    encodedURIComponentToInt8Array(signature_str),
+    keyPair.publicKey.toBytes()
+    ));
+  
+  try {
+    console.log(ENV.sign_api_url)
+    console.log(      {
+      message: encoded_sign_data,
+      signature: signature_str,
+      pubkey: keyPair.publicKey.toString()
+    })
+    const request_result = await axios.post(
+      ENV.sign_api_url,
+      {
+        message: encoded_sign_data,
+        signature: signature_str,
+        pubkey: keyPair.publicKey.toString()
+      },
+      {timeout: 360000, headers:{"Content-Type" : "application/json"}}
+    );
+    return request_result;
+  } catch (e) {
+    throw (
+      (e?.response?.data?.error !== undefined) ? 
+      e?.response?.data?.error : 
+      unknown_error
+    )
+  }
 }
 
 

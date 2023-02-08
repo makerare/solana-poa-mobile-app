@@ -29,6 +29,7 @@ const all = require("../assets/icons/all.png");
 const plus = require("../assets/icons/plus.png");
 const minus = require("../assets/icons/minus.png");
 const restore = require("../assets/icons/restore.png");
+const claim = require("../assets/icons/claim.png");
 
 export default {
     minus,
@@ -61,5 +62,6 @@ export default {
     outgoing,
     copy,
     empty,
-    contract
+    contract,
+    claim
 }

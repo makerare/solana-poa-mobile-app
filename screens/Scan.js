@@ -67,17 +67,15 @@ const sign_and_submit_data = async (
   try{
     const result_apicall = await sign_and_submit_data_api(sign_data, keyPair);
 
-     if (result_apicall.data?.error !== undefined)
-        throw "" + result_apicall.data?.error;
-
     global.successTx = true
   } catch (e) {
     global.successTx = false
     global.errorMsg = "" + e
   }
 
-  navigation.navigate('Home');
   setNftClaimInProcess(false)
+  navigation.navigate('Home');
+
 }
 
 
@@ -95,36 +93,19 @@ const mint_nft = async (
     return;
   setNftClaimInProcess(true)
   try{
-
+    console.log('trying')
     const result_apicall = await mint_nft_api(collection_name, mint_id, pubKey);
     console.log("Minted NFT");
     console.log(result_apicall);
 
-    if (result_apicall.data?.error !== undefined)
-       throw "" + result_apicall.data?.error;
-
-
-    showMessage({
-                message: "Success",
-                description: "You just generated a new asset.",
-                type: "success",
-                icon: "success",
-                position: 'top',
-                duration: 3000
-              });
+    global.successTx = true
   } catch (e) {
-    showMessage({
-                message: "Error during mint:",
-                description: "" + e,
-                type: "danger",
-                icon: "danger",
-                position: 'top',
-                duration: 3000
-              });
+    global.errorMsg = "" + e
+    global.successTx = false
   }
 
   setNftClaimInProcess(false)
-  navigation.navigate('Home');
+  navigation.navigate('Home', );
 }
 
 
@@ -182,7 +163,7 @@ const Scan = ( props ) => {
                       <Text style={ {
                         fontSize: 22,
                         color: '#FFFFFF',
-                        fontFamily: 'Poppins Regular',
+                        fontFamily: 'Poppins-Regular',
                         lineHeight:32
                       } }> Scan QR code </Text>
                 </View>

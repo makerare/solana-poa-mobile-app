@@ -309,12 +309,13 @@ function renderNfts() {
 
 
     const renderItem = ({ item }) => (
+      
         <TouchableOpacity
             style={{
                 marginVertical: SIZES.base,
                 width: SIZES.width / 2.5,
                 alignItems: "center",
-                justifyContent: 'center',
+                justifyContent: 'center'
             }}
             onPress={() => props.navigation.navigate('Item', item)}
         >
@@ -339,10 +340,9 @@ function renderNfts() {
                   maxWidth: 150,
                   alignItems: "center",
                   justifyContent: 'center',
-                  resizeMode: 'contain',
                   flex: 1,
                 }}
-                resizeMode={"contain"}
+                resizeMode={"cover"}
                 controls={false}
                 audioOnly={false}
                 repeat={true}
@@ -382,12 +382,12 @@ function renderNfts() {
             >
                 <Text style={{
                               lineHeight: 20,
-                              fontFamily: "Poppins SemiBold",
+                              fontFamily: "Poppins-SemiBold",
                               fontSize: 16,
                               textAlign: "center",
                               marginBottom: 5,
                               textTransform: 'uppercase'}}>{item.collection}</Text>
-                <Text style={{ fontFamily: "Poppins Light",
+                <Text style={{ fontFamily: "Poppins-Light",
                                lineHeight: 22,
                                fontSize: 20,
                                textAlign: "center", }}>{item.name}</Text>

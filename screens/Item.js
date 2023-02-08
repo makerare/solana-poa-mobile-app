@@ -40,10 +40,10 @@ const ItemAttributes = ( {attributes} ) => {
     incrAttr++;
     returned_items.push(
       <View key={incrAttr} style={{borderWidth: 1, borderColor: COLORS.primary, borderRadius: 25, justifyContent: 'center', alignItems: 'center', padding: 6, marginBottom: 20}}>
-        <Text style={{ fontFamily: "Poppins SemiBold", color: COLORS.primary, marginTop: 3, fontSize: 16, lineHeight: 25}}>
+        <Text style={{ fontFamily: "Poppins-SemiBold", color: COLORS.primary, marginTop: 3, fontSize: 16, lineHeight: 25}}>
           {attribute}
         </Text>
-        <Text style={{ fontFamily: "Poppins Light", color: COLORS.primary, marginTop: 3, fontSize: 16, lineHeight: 25}}>
+        <Text style={{ fontFamily: "Poppins-Light", color: COLORS.primary, marginTop: 3, fontSize: 16, lineHeight: 25}}>
           {attributes[attribute]}
         </Text>
       </View>
@@ -102,7 +102,7 @@ const Item = ( props ) => {
                              justifyContent: 'center',
                              marginLeft: 15,}}>
                 <Text style={{ color: "white",
-                               fontFamily: 'Poppins SemiBold',
+                               fontFamily: 'Poppins-SemiBold',
                                fontSize: 22,
                                lineHeight: 30}}>
                 {props.route?.params.name}
@@ -128,7 +128,7 @@ const Item = ( props ) => {
               alignItems: 'center',
               justifyContent: 'center',
           }}>
-            <View
+            <TouchableOpacity
                 style={{
                     maxWidth: 300,
                     width: "100%",
@@ -138,6 +138,11 @@ const Item = ( props ) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}
+                onPress={
+                  ()=>Linking.openURL(
+                    item.video ? item.video : item.img
+                  )
+                }
             >
 
             {item.video ?
@@ -181,14 +186,14 @@ const Item = ( props ) => {
                   }}
               />
             }
-            </View>
+            </TouchableOpacity>
 
             {(item.external_url) && <View style={{ marginTop: 10,
                            justifyContent: 'center',
                            alignItems: 'center'}}>
               <Text onPress={()=>Linking.openURL(item.external_url) }
               style={{ textDecorationLine: "underline",
-                       fontFamily: "Poppins SemiBold",
+                       fontFamily: "Poppins-SemiBold",
                        color: COLORS.primary,
                        marginTop: 3,
                        fontSize: 20,
@@ -201,6 +206,58 @@ const Item = ( props ) => {
 
             </View>}
 
+            {!(
+              console.log(item.mint) &&
+              item.attributes.Claimable === "True"
+              &&
+              item.attributes.Claimed !== "True"
+              ) && (<TouchableOpacity
+              activeOpacity={0.5}
+              onPress={async ()=>{
+                Linking.openURL(
+                  `${ENV.claim_url}&mint=${item.mint}`
+                )
+              }}
+              style={{ width: 150,
+                      height: 75,
+                       alignItems: 'center',
+                       marginTop: 10,
+                                     height: 70,
+                                     flexDirection: 'column',
+                                     borderRadius: 30,
+                                     border: 30,
+                                     backgroundColor:  COLORS.primary,
+                                     alignItems: 'center',
+                                     justifyContent: 'center', }}
+            >
+            <View style={{ width: "100%",}}>
+
+              <View style={{ width: "100%"
+                             }}>
+                 <View style={{ justifyContent: 'center',
+                                alignItems: 'center',
+                                postion: "absolute",
+                                height: 65,
+                                flexDirection: 'row',
+                              }}>
+                                <Image
+                                    source={icons.claim}
+                                    resizeMode="contain"
+                                    style={{
+                                      tintColor: 'white',
+                                        width: 30,
+                                        height: 30,
+                                    }}
+                                />
+                                <Text style={{ fontFamily: "Poppins-Medium", color: "white", marginTop: 3, fontSize: 22}}>
+                                  &nbsp;&nbsp;USE&nbsp;&nbsp;
+                                </Text>
+                  </View>
+              </View>
+            </View>
+            </TouchableOpacity>)}
+
+            
             <TouchableOpacity
               activeOpacity={0.5}
               onPress={async ()=>{
@@ -238,13 +295,14 @@ const Item = ( props ) => {
                                         height: 30,
                                     }}
                                 />
-                                <Text style={{ fontFamily: "Poppins Medium", color: "white", marginTop: 3, fontSize: 22}}>
+                                <Text style={{ fontFamily: "Poppins-Medium", color: "white", marginTop: 3, fontSize: 22}}>
                                   &nbsp;&nbsp;SEND&nbsp;&nbsp;
                                 </Text>
                   </View>
               </View>
             </View>
             </TouchableOpacity>
+
           </View>
 
           <View
@@ -253,36 +311,35 @@ const Item = ( props ) => {
               }}
           >
           <View style={{}}>
-            <Text style={{ fontFamily: "Poppins SemiBold", color: COLORS.primary, marginTop: 3, fontSize: 25, lineHeight: 34}}>
+            <Text style={{ fontFamily: "Poppins-SemiBold", color: COLORS.primary, marginTop: 3, fontSize: 25, lineHeight: 34}}>
               Collection
             </Text>
-            <Text style={{ fontFamily: "Poppins Light", color: COLORS.primary, marginTop: 3, fontSize: 20, lineHeight: 30}}>
-              <Text style={{fontFamily: "Poppins Light Italic"}}>[{item.symbol}]</Text> {item.collection}
+            <Text style={{ fontFamily: "Poppins-Light", color: COLORS.primary, marginTop: 3, fontSize: 20, lineHeight: 30}}>
+              <Text style={{fontFamily: "Poppins-LightItalic"}}>[{item.symbol}]</Text> {item.collection}
             </Text>
           </View>
 
-
             <View style={{}}>
-              <Text style={{  fontFamily: "Poppins SemiBold", color: COLORS.primary, marginTop: 15, fontSize: 25, lineHeight: 34}}>
+              <Text style={{  fontFamily: "Poppins-SemiBold", color: COLORS.primary, marginTop: 15, fontSize: 25, lineHeight: 34}}>
                 Description
               </Text>
-              <Text style={{ fontFamily: "Poppins Light", color: COLORS.primary, marginTop: 3, fontSize: 20, lineHeight: 30}}>
+              <Text style={{ fontFamily: "Poppins-Light", color: COLORS.primary, marginTop: 3, fontSize: 20, lineHeight: 30}}>
                 {item.description}
               </Text>
             </View>
 
             <View style={{}}>
-              <Text style={{ fontFamily: "Poppins SemiBold", color: COLORS.primary, marginTop: 15, fontSize: 25, lineHeight: 34}}>
+              <Text style={{ fontFamily: "Poppins-SemiBold", color: COLORS.primary, marginTop: 15, fontSize: 25, lineHeight: 34}}>
                 Royalties
               </Text>
-              <Text style={{ fontFamily: "Poppins Light", color: COLORS.primary, marginTop: 3, fontSize: 20, lineHeight: 30}}>
+              <Text style={{ fontFamily: "Poppins-Light", color: COLORS.primary, marginTop: 3, fontSize: 20, lineHeight: 30}}>
                 {item.sellerFeeBasisPoints/100}%
               </Text>
             </View>
 
 
             <View style={{marginTop: 10}}>
-              <Text style={{ fontFamily: "Poppins SemiBold", color: COLORS.primary, marginTop: 3, fontSize: 25, lineHeight: 38, marginBottom: 5}}>
+              <Text style={{ fontFamily: "Poppins-SemiBold", color: COLORS.primary, marginTop: 3, fontSize: 25, lineHeight: 38, marginBottom: 5}}>
                 Attributes
               </Text>
 
@@ -296,7 +353,7 @@ const Item = ( props ) => {
                            alignItems: 'center'}}>
               <Text onPress={()=>Linking.openURL('https://explorer.solana.com/address/'+item.mint+'?cluster=' + ENV.network) }
               style={{ textDecorationLine: "underline",
-                       fontFamily: "Poppins SemiBold",
+                       fontFamily: "Poppins-SemiBold",
                        color: COLORS.primary,
                        marginTop: 3,
                        fontSize: 20,
