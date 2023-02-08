@@ -72,7 +72,7 @@ const Backup = ({ navigation }) => {
     }
   }, [pin]);
 
-  const _onPressNumber = (n: number) => {
+  const _onPressNumber = (n) => {
     setPin([...pin, n]);
   };
 
