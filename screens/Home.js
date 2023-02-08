@@ -177,8 +177,9 @@ const Home = ( props ) => {
    }
 
   useEffect(() => {
+    if (!isMountedHome)
+      refreshNfts();
     isMountedHome = true
-    //refreshNfts();
     const unsubscribeFocus = props.navigation.addListener('focus', async () => {
       refreshNfts();
      });

@@ -38,7 +38,7 @@ const createConnection = async () => {
   if (!(global.connection)) {
     global.connection = new solanaWeb3.Connection(global.rpc);
   }
-  return global.connection
+  return global.connection 
 };
 
 

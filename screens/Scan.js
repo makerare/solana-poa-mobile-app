@@ -225,7 +225,6 @@ const Scan = ( props ) => {
     }
 
     const onSuccessScan = async (e) => {
-      console.log("scanned"+e)
       try {
         if (e.data.startsWith('sign:')) {
           const sign_data = e.data
@@ -246,6 +245,12 @@ const Scan = ( props ) => {
             props.navigation
           )
 
+          return;
+        }
+        if ((await isValidAddress(e.data)).valid) {
+          const passedData = props.route?.params ? props.route?.params : {}
+          passedData.toAddress = e.data;
+          props.navigation.navigate('Send', passedData)
           return;
         }
         if (e.data.startsWith('http')) {
@@ -270,30 +275,17 @@ const Scan = ( props ) => {
             );
             return;
           }
-          throw 'Error';
         }
-
-        if (await isValidAddress(e.data)) {
-          const passedData = props.route?.params ? props.route?.params : {}
-          passedData.toAddress = e.data;
-          props.navigation.navigate('Send', passedData)
-          return;
-        }
-        throw 'Error';
+        throw 'Invalid QR code.';
       } catch(err){
         console.log(err)
-        showMessage({
-                    message: "Invalid QR code.",
-                    description: "QR code data was not recognized.",
-                    type: "danger",
-                    icon: "danger",
-                    position: 'top',
-                    duration: 3000
-                  });
+        global.errorMsg = "" + err
+        global.successTx = false
+        props.navigation.navigate('Home');
+        return;
       }
     scanner.reactivate()
     };
-    //(async ()=>{await new Promise(r => setTimeout(r, 2000));onSuccessScan({data: "sign:test"}); })()
 
   return (
       <View style={{flex: 1, backgroundColor: COLORS.black,}}>
