@@ -257,16 +257,6 @@ const TransferedNFTs =  ( props ) => {
                           {'\n '+asset.data.collection.name}
                         </Text>
                       </View>
-
-                      {asset.data?.attributes?.Artist!= undefined && <View style={{width:"100%", flexDirection: "row"}}>
-                        <Text style={{ fontWeight: "bold", fontSize: 18, width: "100%", color:'#505050', textAlign: 'center'}}>
-                          Artist
-                        </Text>
-                        <Text style={{ //...FONTS.body4,
-                          fontSize: 16,textAlign: 'center', width:"100%",marginLeft: 'auto', color:'#505050' }}>
-                          {'\n ' + asset.data.attributes?.Artist}
-                        </Text>
-                      </View>}
                     </View>
                     <View
                         style={{

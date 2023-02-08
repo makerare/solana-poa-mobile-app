@@ -206,16 +206,11 @@ const Item = ( props ) => {
 
             </View>}
 
-            {!(
-              console.log(item.mint) &&
-              item.attributes.Claimable === "True"
-              &&
-              item.attributes.Claimed !== "True"
-              ) && (<TouchableOpacity
+            <TouchableOpacity
               activeOpacity={0.5}
               onPress={async ()=>{
                 Linking.openURL(
-                  `${ENV.claim_url}&mint=${item.mint}`
+                  `${ENV.claim_url}&mint_hash=${item.mint}`
                 )
               }}
               style={{ width: 150,
@@ -255,7 +250,7 @@ const Item = ( props ) => {
                   </View>
               </View>
             </View>
-            </TouchableOpacity>)}
+            </TouchableOpacity>
 
             
             <TouchableOpacity
