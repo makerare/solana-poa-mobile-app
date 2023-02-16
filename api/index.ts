@@ -38,7 +38,7 @@ const createConnection = async () => {
   if (!(global.connection)) {
     global.connection = new solanaWeb3.Connection(global.rpc);
   }
-  return global.connection 
+  return global.connection
 };
 
 
@@ -732,8 +732,8 @@ export const breed_nft = async (pubKeyString) => {
     return request_result;
   } catch (e) {
     throw (
-      (e?.response?.data?.error !== undefined) ? 
-      e?.response?.data?.error : 
+      (e?.response?.data?.error !== undefined) ?
+      e?.response?.data?.error :
       unknown_error
     )
   }
@@ -753,20 +753,12 @@ const mint_nft_api = async (collection_name, mint_id, pubKeyString) => {
     return request_result;
   } catch (e) {
     throw (
-      (e?.response?.data?.error !== undefined) ? 
-      e?.response?.data?.error : 
+      (e?.response?.data?.error !== undefined) ?
+      e?.response?.data?.error :
       unknown_error
     )
   }
 }
-
-
-const encodedURIComponentToUint8Array = function(s) {
-  if (typeof s !== 'string') throw new TypeError('expected string');
-  var i, d = unescape(s), b = new Uint8Array(d.length);
-  for (i = 0; i < d.length; i++) b[i] = d.charCodeAt(i);
-  return b;
-};
 
 
 const uint8ArrayToEncodedURIComponent = function(arr) {
@@ -784,20 +776,33 @@ export const encodedURIComponentToInt8Array = function(s) {
 };
 
 
-export const sign_and_submit_data_api = async (sign_data, keyPair) => {
-  const encoded_sign_data = encodeURIComponent(sign_data);
-  
-  const message = encodedURIComponentToUint8Array(encoded_sign_data);
-  
+export const sign_data = (payload, keyPair) => {
+  const encoded_sign_data = encodeURIComponent(payload);
+
+  const message = encodedURIComponentToInt8Array(encoded_sign_data);
+
   const signature = tweetnacl.sign.detached(message, keyPair.secretKey);
   const signature_str = uint8ArrayToEncodedURIComponent(signature);
 
-  console.log(tweetnacl.sign.detached.verify(
-    encodedURIComponentToInt8Array(encoded_sign_data),
-    encodedURIComponentToInt8Array(signature_str),
-    keyPair.publicKey.toBytes()
-    ));
-  
+  return {
+    message: encoded_sign_data,
+    signature: signature_str,
+    pubkey: keyPair.publicKey.toString()
+  };
+}
+
+export const sign_nft_ownership = (mint_hash, keyPair) => {
+  const claims = {
+    iat: Date.now(),
+    sub: mint_hash,
+    iss: "bary"
+  };
+  const payload = JSON.stringify(claims)
+
+  return sign_data(payload, keyPair);
+}
+
+  /*
   try {
     console.log(ENV.sign_api_url)
     console.log(      {
@@ -817,12 +822,13 @@ export const sign_and_submit_data_api = async (sign_data, keyPair) => {
     return request_result;
   } catch (e) {
     throw (
-      (e?.response?.data?.error !== undefined) ? 
-      e?.response?.data?.error : 
+      (e?.response?.data?.error !== undefined) ?
+      e?.response?.data?.error :
       unknown_error
     )
   }
-}
+  */
+
 
 
 

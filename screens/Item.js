@@ -16,9 +16,13 @@ import { View,
 import LinearGradient from 'react-native-linear-gradient'
 import Clipboard from '@react-native-clipboard/clipboard';
 
-import {StatusBarHeight} from '../StatusBarHeight'
+import { StatusBarHeight } from '../StatusBarHeight'
 
 import { useIsFocused } from '@react-navigation/native';
+
+import { useStoreState } from "../hooks/storeHooks"
+
+import { sign_nft_ownership } from "../api";
 
 import { COLORS, SIZES, FONTS, icons, images, ENV } from "../constants"
 
@@ -54,7 +58,10 @@ const ItemAttributes = ( {attributes} ) => {
 
 
 const Item = ( props ) => {
-  const [statusBarHeight, setStatusBarHeight]  = useState(StatusBarHeight)
+  const [statusBarHeight, setStatusBarHeight]  = useState(StatusBarHeight);
+  const wallet = useStoreState((state) => state.wallet, (prev, next) => prev.wallet.seed === next.wallet.seed);
+  const accounts = useStoreState((state) => state.accounts);
+
   useEffect(()=>
     {
       if (Platform.OS === 'ios')
@@ -209,8 +216,25 @@ const Item = ( props ) => {
             <TouchableOpacity
               activeOpacity={0.5}
               onPress={async ()=>{
+                const currentAccount = accounts[0];
+                const keyPair = accountFromSeed(
+                    wallet.seed,
+                    currentAccount.index,
+                    currentAccount.derivationPath,
+                    0
+                  );
+
+                const {
+                  message,
+                  signature,
+                  pubkey
+                } = sign_nft_ownership(item.mint, keyPair);
+
                 Linking.openURL(
-                  `${ENV.claim_url}&mint_hash=${item.mint}`
+                  `${ENV.claim_url}`
+                  +`&message=${message}`
+                  +`&signature=${signature}`
+                  +`&pubkey=${pubkey}`
                 )
               }}
               style={{ width: 150,
@@ -252,7 +276,7 @@ const Item = ( props ) => {
             </View>
             </TouchableOpacity>
 
-            
+
             <TouchableOpacity
               activeOpacity={0.5}
               onPress={async ()=>{

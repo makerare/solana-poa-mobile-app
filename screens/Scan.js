@@ -21,7 +21,7 @@ import { Spinner } from "../components";
 
 import { accountFromSeed } from "../utils";
 
-import { isValidAddress, mint_nft_api, sign_and_submit_data_api } from "../api";
+import { isValidAddress, mint_nft_api } from "../api";
 
 
 import { useIsFocused } from '@react-navigation/native';
@@ -65,7 +65,7 @@ const sign_and_submit_data = async (
     return;
   setNftClaimInProcess(true)
   try{
-    const result_apicall = await sign_and_submit_data_api(sign_data, keyPair);
+    //const result_apicall = await sign_and_submit_data_api(sign_data, keyPair);
 
     global.successTx = true
   } catch (e) {
