@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
     KeyboardAvoidingView,
     NativeModules,
+    Linking,
     StatusBarIOS
 } from "react-native"
 import { RNCamera } from 'react-native-camera'
@@ -226,24 +227,11 @@ const Scan = ( props ) => {
 
     const onSuccessScan = async (e) => {
       try {
-        if (e.data.startsWith('sign:')) {
-          const sign_data = e.data
+        if (e.data.startsWith('signature:')) {
+          const qr_code_data = e.data;
+          const signed_data = qr_code_data.slice(10);
 
-          const currentAccount = accounts[0];
-          const keyPair = accountFromSeed(
-            wallet.seed,
-            currentAccount.index,
-            currentAccount.derivationPath,
-            0
-          );
-
-          await sign_and_submit_data(
-            sign_data,
-            keyPair,
-            nftClaimInProcess,
-            setNftClaimInProcess,
-            props.navigation
-          )
+          Linking.openURL(`${ENV.verify_url}&${signed_data}`);
 
           return;
         }

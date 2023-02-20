@@ -5,5 +5,6 @@ export const ENV = {
   sign_api_url: 'https://solana.makerare.io/api/app/sign?authority=bary',
   rpc_api_url: "https://solana.makerare.io/api/app/rpc?authority=bary",
   breed_api_url: "https://solana.makerare.io/api/app/breed?authority=bary",
-  claim_url: "https://solana.makerare.io/app/claim?authority=bary",
+  use_url: "https://solana.makerare.io/app/use?authority=bary",
+  verify_url: "https://solana.makerare.io/app/verify?authority=bary",
 }

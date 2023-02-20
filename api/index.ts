@@ -764,7 +764,7 @@ const mint_nft_api = async (collection_name, mint_id, pubKeyString) => {
 const uint8ArrayToEncodedURIComponent = function(arr) {
   var i, s = [];
   for (i = 0; i < arr.length; i++) s.push(String.fromCharCode(arr[i]));
-  return (escape(s.join('')));
+  return encodeURIComponent(escape(s.join('')));
 };
 
 
@@ -805,7 +805,7 @@ export const sign_nft_ownership = (mint_hash, keyPair) => {
   /*
   try {
     console.log(ENV.sign_api_url)
-    console.log(      {
+    console.log({
       message: encoded_sign_data,
       signature: signature_str,
       pubkey: keyPair.publicKey.toString()

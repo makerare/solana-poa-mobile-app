@@ -13,6 +13,7 @@ import { View,
          StatusBarIOS
         } from "react-native";
 
+import { accountFromSeed, maskedAddress } from "../utils";
 import LinearGradient from 'react-native-linear-gradient'
 import Clipboard from '@react-native-clipboard/clipboard';
 
@@ -218,24 +219,24 @@ const Item = ( props ) => {
               onPress={async ()=>{
                 const currentAccount = accounts[0];
                 const keyPair = accountFromSeed(
-                    wallet.seed,
-                    currentAccount.index,
-                    currentAccount.derivationPath,
-                    0
-                  );
+                  wallet.seed,
+                  currentAccount.index,
+                  currentAccount.derivationPath,
+                  0
+                );
 
                 const {
                   message,
                   signature,
                   pubkey
                 } = sign_nft_ownership(item.mint, keyPair);
-
+                
                 Linking.openURL(
-                  `${ENV.claim_url}`
+                  `${ENV.use_url}`
                   +`&message=${message}`
                   +`&signature=${signature}`
                   +`&pubkey=${pubkey}`
-                )
+                );
               }}
               style={{ width: 150,
                       height: 75,
